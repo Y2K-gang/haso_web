@@ -14,18 +14,39 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
   const [images, setImages] = useState<File[]>([]);
   const [quantity, setQuantity] = useState(initialData?.quantity);
   const [unitPrice, setUnitPrice] = useState(initialData?.unitPrice);
-  const [description, setDescription] = useState(
-    initialData?.description || ""
-  );
+  const [description, setDescription] = useState(initialData?.description || "");
   const [location1, setLocation1] = useState("");
   const [location2, setLocation2] = useState("");
   const [location3, setLocation3] = useState("");
   const [location, setLocation] = useState(initialData?.location || "");
-
+  const [location2Options, setLocation2Options] = useState<string[]>([]); // location2 옵션을 관리
   const [category, setCategory] = useState(initialData?.category || "어류");
   const [ownerId, setOwnerId] = useState(initialData?.ownerId || "");
 
   const navigate = useNavigate();
+
+  // location1, 2, 3 합치기
+  const updateLocation = () => {
+    setLocation(`${location1} ${location2} ${location3}`.trim());
+  };
+
+  // location1이 바뀔 때 location2 옵션 변경
+  const handleLocation1Change = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLocation1 = e.target.value;
+    setLocation1(newLocation1);
+
+    // location1에 따라 location2 달라짐
+    if (newLocation1 === "서울특별시") {
+      setLocation2Options(["중구", "서초구", "강남구"]);
+    } else if (newLocation1 === "대구광역시") {
+      setLocation2Options(["수성구", "중구", "동구"]);
+    } else {
+      setLocation2Options([]); // 다른 값은 location2 옵션 비우기
+    }
+
+    setLocation2("");
+    updateLocation();
+  };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -124,7 +145,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
         <div>
           <select
             value={location1}
-            onChange={(e) => setLocation1(e.target.value)}
+            onChange={handleLocation1Change} // location1 변경 시 호출
           >
             <option value="0">시</option>
             <option value="서울특별시">서울특별시</option>
@@ -132,15 +153,24 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
           </select>
           <select
             value={location2}
-            onChange={(e) => setLocation2(e.target.value)}
+            onChange={(e) => {
+              setLocation2(e.target.value);
+              updateLocation();
+            }}
           >
             <option value="0">군</option>
-            <option value="중구">중구</option>
-            <option value="수성구">수성구</option>
+            {location2Options.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
           </select>
           <input
             value={location3}
-            onChange={(e) => setLocation3(e.target.value)}
+            onChange={(e) => {
+              setLocation3(e.target.value);
+              updateLocation();
+            }}
             placeholder="상세 장소를 입력해주세요"
             required
           />

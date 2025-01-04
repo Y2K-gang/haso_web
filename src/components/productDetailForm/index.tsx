@@ -12,7 +12,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     }
 
     return product.images.map((image, index) => {
-      const imageUrl = image instanceof File ? URL.createObjectURL(image) : image; // File 또는 URL 처리
+      const imageUrl = image instanceof File ? URL.createObjectURL(image) : image;
       return (
         <img
           key={index}
@@ -30,8 +30,8 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
       <div>{renderImages()}</div>
       <p>수량: {product.quantity}</p>
       <p>단가: {product.unitPrice}원</p>
-      <p>설명: {product.description}</p>
       <p>장소: {product.location}</p>
+      <p>설명: {product.description}</p>
       <p>어종: {product.category}</p>
     </div>
   );
