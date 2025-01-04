@@ -3,7 +3,9 @@ import { paths } from "@/constants/path";
 import Login from "@/page/auth/login";
 import SignUp from "@/page/auth/signup";
 import Main from "@/page/main";
-import Product from "@/page/product";
+import ProductEdit from "@/page/product/edit";
+import ProductWrite from "@/page/product/write";
+import ProductDetail from "@/page/product/detail";
 
 const Router = () => {
   return (
@@ -12,7 +14,9 @@ const Router = () => {
         <Route path={paths.login} element={<Login />} />
         <Route path={paths.signup} element={<SignUp />} />
           <Route path={paths.main} element={<Main />} />
-          <Route path={paths.product} element={<Product />} />
+          <Route path={paths.productDetail} element={<ProductDetail />} />
+          <Route path={paths.productEdit} element={<ProductEdit />} />          
+          <Route path={paths.productWrite} element={<ProductWrite />} />
       </Routes>
     </BrowserRouter>
   );
