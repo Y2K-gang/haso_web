@@ -1,8 +1,10 @@
 import React from "react";
 import useCreateProduct from "@/hooks/product/useCreateProduct";
 import ProductForm from "@/components/productWriteForm";
-import { ProductData } from "@/type/product";
+import { ProductData } from "@/type/product.type";
 import * as S from "./style";
+import Cookies from "js-cookie";
+import { ACCESS_TOKEN_KEY } from "@/constants/token/token.constants";
 
 const RegisterProductPage: React.FC = () => {
   const { createProduct, loading, error } = useCreateProduct();
@@ -10,14 +12,14 @@ const RegisterProductPage: React.FC = () => {
   const handleRegister = async (data: ProductData) => {
     try {
       // 로컬 저장소에서 토큰 가져오기 (예시임)
-      const token = localStorage.getItem("token");
+      const token = ACCESS_TOKEN_KEY
       if (!token) {
         alert("로그인이 필요합니다.");
         return;
       }
 
       await createProduct(data, token);
-      console.log(data)
+      console.log(data);
       alert("제품 등록 완료!");
     } catch (err) {
       alert("제품 등록 실패: " + error);

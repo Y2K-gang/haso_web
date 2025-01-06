@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { ProductData } from '@/type/product';
+import React, { useState, useEffect } from "react";
+import { ProductData } from "@/type/product.type";
 
 interface ProductEditFormProps {
   product: ProductData;
   onSave: (updatedProduct: ProductData) => void;
 }
 
-const ProductEditForm: React.FC<ProductEditFormProps> = ({ product, onSave }) => {
+const ProductEditForm: React.FC<ProductEditFormProps> = ({
+  product,
+  onSave,
+}) => {
   const [updatedProduct, setUpdatedProduct] = useState<ProductData>(product);
 
   useEffect(() => {

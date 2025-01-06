@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import axios from 'axios';
-import { ProductData } from '@/type/product';
+import { useState } from "react";
+import hasoAxios from "@/libs/axios";
+import { ProductData } from "@/type/product.type";
 
 export const useProductEdit = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -11,10 +11,9 @@ export const useProductEdit = () => {
       setIsLoading(true);
       setError(null);
 
-      await axios.patch(`/product/${productId}`, updatedProduct);
-
+      await hasoAxios.patchData(`/product/${productId}`, updatedProduct);
     } catch (err) {
-      setError('상품 수정에 실패했습니다.');
+      setError("상품 수정에 실패했습니다.");
     } finally {
       setIsLoading(false);
     }

@@ -1,6 +1,6 @@
-import axios from 'axios';
-import { useState } from 'react';
-import { ProductData } from '@/type/product';
+import hasoAxios from "@/libs/axios";
+import { useState } from "react";
+import { ProductData } from "@/type/product.type";
 
 const useCreateProduct = () => {
   const [loading, setLoading] = useState(false);
@@ -9,21 +9,15 @@ const useCreateProduct = () => {
   const createProduct = async (productData: ProductData, token: string) => {
     setLoading(true);
     try {
-      const response = await axios.post(
-        '/product',
-        productData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-      console.log('성공:', response.data);
+      // 반환 타입을 명시적으로 지정
+      const response = await hasoAxios.postData<{ data: ProductData }>("/product", productData);
+      console.log("성공:", response.data);
       return response.data;
     } catch (err: any) {
-      console.error('실패:', err);
-      setError(err.response?.data?.message || '상품 생성 중 오류가 발생했습니다.');
+      console.error("실패:", err);
+      setError(
+        err.response?.data?.message || "상품 생성 중 오류가 발생했습니다."
+      );
       throw err;
     } finally {
       setLoading(false);

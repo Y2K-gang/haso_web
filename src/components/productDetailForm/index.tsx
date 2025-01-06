@@ -1,5 +1,5 @@
-import React from 'react';
-import { ProductData } from '@/type/product';
+import React from "react";
+import { ProductData } from "@/type/product.type";
 
 type ProductDetailsProps = {
   product: ProductData;
@@ -12,13 +12,14 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
     }
 
     return product.images.map((image, index) => {
-      const imageUrl = image instanceof File ? URL.createObjectURL(image) : image;
+      const imageUrl =
+        image instanceof File ? URL.createObjectURL(image) : image;
       return (
         <img
           key={index}
           src={imageUrl}
           alt={`상품 사진 ${index + 1}`}
-          style={{ width: '200px', height: 'auto' }}
+          style={{ width: "200px", height: "auto" }}
         />
       );
     });

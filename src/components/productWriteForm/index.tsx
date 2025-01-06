@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ProductData } from "@/type/product";
+import { ProductData } from "@/type/product.type";
 import * as S from "./style";
 import { useNavigate } from "react-router-dom";
 import Category from "@/components/categorySelect";
@@ -14,7 +14,9 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
   const [images, setImages] = useState<File[]>([]);
   const [quantity, setQuantity] = useState(initialData?.quantity);
   const [unitPrice, setUnitPrice] = useState(initialData?.unitPrice);
-  const [description, setDescription] = useState(initialData?.description || "");
+  const [description, setDescription] = useState(
+    initialData?.description || ""
+  );
   const [location1, setLocation1] = useState("");
   const [location2, setLocation2] = useState("");
   const [location3, setLocation3] = useState("");
