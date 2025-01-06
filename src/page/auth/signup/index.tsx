@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from "react";
 import * as S from "./style";
-import Form from "@/components/form";
+import Form from "@/components/form/auth";
 import { SIGNUP_STEPS } from "./steps";
 import { useNavigate } from "react-router-dom";
 import { SignUpProps } from "@/type/auth/index.type";

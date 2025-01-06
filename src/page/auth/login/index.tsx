@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "./style";
 import LargeFiled from "@/components/filed/large";
-import Form from "@/components/form";
+import Form from "@/components/form/auth";
 import LargeButton from "@/components/button/large";
 import { Toast } from "@/libs/toast";
 
