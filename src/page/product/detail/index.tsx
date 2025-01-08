@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
+import * as S from "./style";
 import { useNavigate, useParams } from "react-router-dom";
-import ProductDetails from "@/components/productDetailForm";
+import ProductDetails from "@/components/form/product/productDetailForm";
 import ChatButton from "@/components/XLargeButton";
 import hasoAxios from "@/libs/axios";
 import { ProductData } from "@/type/product.type";
-import { useProductEdit } from "@/hooks/product/useProductEdit";
 
 const ProductDetailsPage: React.FC = () => {
   const navigate = useNavigate();
@@ -22,10 +22,11 @@ const ProductDetailsPage: React.FC = () => {
       try {
         if (!productId) return;
 
-        // 상품 정보 가져오기
+        // 상품 정보 가져오기(서버 연동)
         const fetchedProduct: ProductData = await hasoAxios.getData(
           `/product/${productId}`
         );
+
         setProduct(fetchedProduct);
 
         // 현재 로그인된 유저 ID 확인
@@ -42,9 +43,10 @@ const ProductDetailsPage: React.FC = () => {
     fetchProductDetails();
   }, [productId]);
 
-  const handleEditClick = () => {
+  const handleEditClick = async () => {
     if (product) {
-      navigate(`/product/${productId}/edit`, { state: { product } }); // 수정 페이지로 이동하면서 상품 정보 전달
+      console.log("상품 수정")
+      navigate(`/product/${productId}/edit`, { state: { product } }); 
     }
   };
 
@@ -52,6 +54,7 @@ const ProductDetailsPage: React.FC = () => {
     if (productId) {
       try {
         await hasoAxios.deleteData(`/product/${productId}`, {});
+        console.log(`상품 ${productId} 삭제`);
         navigate("/main"); // 삭제 후 메인으로 리다이렉트
       } catch (err) {
         console.error("상품 삭제 중 오류가 발생했습니다:", err);
@@ -65,42 +68,26 @@ const ProductDetailsPage: React.FC = () => {
   if (!product) return <p>상품 정보를 찾을 수 없습니다.</p>;
 
   return (
-    <div>
+    <S.DetailBack>
       <ProductDetails product={product} />
       {isOwner ? (
-        <div style={{ display: "flex", gap: "10px" }}>
-          <button
+        <div style={{ display: "flex", gap: "1.5vw" }}>
+          <S.EditBtn
             onClick={handleEditClick}
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#4CAF50",
-              color: "white",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
           >
             수정하기
-          </button>
-          <button
+          </S.EditBtn>
+          <S.DeleteBtn
             onClick={handleDeleteClick}
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#f44336",
-              color: "white",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
           >
             삭제하기
-          </button>
+          </S.DeleteBtn>
         </div>
       ) : (
         // 작성자가 아닐 경우 채팅하기 버튼 띄우기
-        <ChatButton receiverId={product.ownerId} />
+        <ChatButton text={"채팅하기"} />
       )}
-    </div>
+    </S.DetailBack>
   );
 };
 

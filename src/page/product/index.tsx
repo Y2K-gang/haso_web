@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ProductForm from "@/components/productWriteForm"; // 작성 폼 컴포넌트 임포트
+import ProductForm from "@/components/form/product/productRegisterForm"; // 작성 폼 컴포넌트 임포트
 import { ProductData } from "@/type/product.type";
 import hasoAxios from "@/libs/axios";
 import { toast } from "react-toastify";
@@ -29,7 +29,8 @@ const ProductEditPage: React.FC = () => {
   return (
     <div>
       <h1>상품 등록</h1>
-      <ProductForm onSubmit={handleProductSubmit} /> {/* ProductForm 컴포넌트 렌더링 */}
+      <ProductForm onSubmit={handleProductSubmit} />{" "}
+      {/* ProductForm 컴포넌트 렌더링 */}
     </div>
   );
 };
