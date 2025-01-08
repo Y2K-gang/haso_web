@@ -7,7 +7,7 @@ const Toast = (type: "success" | "error" | "info", message: string) => {
 
   toast(message, {
     type,
-    className: "toast-container, commit용", // 향후 commit용 제거
+    className: "toast-container",
     progressClassName: progressColorClass,
   });
 };
