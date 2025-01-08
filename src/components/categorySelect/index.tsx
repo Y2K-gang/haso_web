@@ -1,12 +1,26 @@
-import React from 'react'
+import React from "react";
 import * as S from "./style";
+import plusImg from "@/assets/image/plus.svg";
+import checkImg from "@/assets/image/check.svg";
 
-const Category = () => {
-  return (
-    <S.CateBack>
-
-    </S.CateBack>
-  )
+interface CategoryProps {
+  category: string;
+  isSelected: boolean;
+  onClick: () => void;
 }
 
-export default Category
+
+const CategorySelector: React.FC<CategoryProps> = ({
+  category,
+  isSelected,
+  onClick,
+}) => {
+  return (
+    <S.CateBack onClick={onClick} isSelected={isSelected}>
+      <img src={isSelected ? checkImg : plusImg} />
+      {category}
+    </S.CateBack>
+  );
+};
+
+export default CategorySelector;
