@@ -4,7 +4,7 @@ import Login from "@/page/auth/login";
 import SignUp from "@/page/auth/signup";
 import Main from "@/page/main";
 import ProductEdit from "@/page/product/edit";
-import ProductWrite from "@/page/product/write";
+import ProductWrite from "@/page/product/register";
 import ProductDetail from "@/page/product/detail";
 
 const Router = () => {
