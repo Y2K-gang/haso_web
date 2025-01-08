@@ -1,17 +1,15 @@
 import React from 'react';
+import * as S from "./style";
 
-interface ChatButtonProps {
-  receiverId: string;
+interface XLargeButtonProps {
+  text: string;
 }
 
-const ChatButton: React.FC<ChatButtonProps> = ({ receiverId }) => {
-
-  const handleChat = () => {
-  };
+const XLargeButton: React.FC<XLargeButtonProps> = ({ text }) => {
 
   return (
-    <button onClick={handleChat}>채팅하기</button>
+    <S.XLargeButton>{text}</S.XLargeButton>
   );
 };
 
-export default ChatButton;
+export default XLargeButton;
