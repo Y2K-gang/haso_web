@@ -40,7 +40,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
         </S.InfoAreaInArea>
         <S.Groups>
           <S.SemiBoldFonts>설명</S.SemiBoldFonts>
-          <span style={{fontSize:"17px", fontWeight:"500"}}>{product.description}</span>
+          <S.ExplainContents>{product.description}</S.ExplainContents>
         </S.Groups>
         <S.Groups>
           <S.SemiBoldFonts>구분</S.SemiBoldFonts>

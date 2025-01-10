@@ -27,3 +27,6 @@ export const DeleteBtn = styled.button`
   font-size: 20px;
   font-weight: bold;
 `;
+export const DivInDetailPage = styled.div`
+
+`

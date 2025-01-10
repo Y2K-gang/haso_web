@@ -41,6 +41,10 @@ export const SemiBoldFonts = styled.span`
 font-size: 24px;
 font-weight: bold;
 `
+export const ExplainContents = styled.span`
+font-size: 17px;
+font-weight: 500;
+`
 export const CategoryArea = styled.div`
 width: 8.5vw;
 height: 6.5vh;

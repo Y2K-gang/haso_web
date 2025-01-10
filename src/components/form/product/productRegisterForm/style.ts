@@ -179,3 +179,11 @@ export const CencelBtn = styled.button`
   font-size: 20px;
   font-weight: bold;
 `;
+
+export const DivInRegisterForm = styled.div`
+
+`;
+
+export const OptionInRegisterForm = styled.option`
+
+`;

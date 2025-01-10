@@ -71,7 +71,7 @@ const ProductDetailsPage: React.FC = () => {
     <S.DetailBack>
       <ProductDetails product={product} />
       {isOwner ? (
-        <div style={{ display: "flex", gap: "1.5vw" }}>
+        <S.DivInDetailPage style={{ display: "flex", gap: "1.5vw" }}>
           <S.EditBtn
             onClick={handleEditClick}
           >
@@ -82,7 +82,7 @@ const ProductDetailsPage: React.FC = () => {
           >
             삭제하기
           </S.DeleteBtn>
-        </div>
+        </S.DivInDetailPage>
       ) : (
         // 작성자가 아닐 경우 채팅하기 버튼 띄우기
         <ChatButton text={"채팅하기"} />

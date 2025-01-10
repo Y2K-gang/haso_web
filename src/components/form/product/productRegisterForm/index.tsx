@@ -82,7 +82,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
   return (
     <S.AllWriteArea onSubmit={handleSubmit}>
       <S.TopArea>
-        <div>
+        <S.DivInRegisterForm>
         <S.FileInputWrapper onClick={triggerFileInput}>
           {images.length > 0 ? (
             <p>{images.length}개의 파일이 선택되었습니다</p>
@@ -98,9 +98,9 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
             required
           />
         </S.FileInputWrapper>
-        </div>
+        </S.DivInRegisterForm>
         <S.RightTopArea>
-          <div>
+          <S.DivInRegisterForm>
             <S.Ps style={{ marginBottom: "1vh" }}>제목</S.Ps>
             <S.Inputs
               type="text"
@@ -109,9 +109,9 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
               placeholder="계시물의 제목을 입력해주세요"
               required
             />
-          </div>
+          </S.DivInRegisterForm>
           <S.MiddleOfTopArea>
-            <div>
+            <S.DivInRegisterForm>
               <S.Ps style={{ marginBottom: "1vh" }}>단가</S.Ps>
               <S.PriceInput
                 type="number"
@@ -120,8 +120,8 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
                 placeholder="단가를 입력해주세요"
                 required
               />
-            </div>
-            <div>
+            </S.DivInRegisterForm>
+            <S.DivInRegisterForm>
               <S.Ps style={{ marginBottom: "1vh" }}>수량</S.Ps>
               <S.QuantityInput
                 type="number"
@@ -131,9 +131,9 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
                 placeholder="수량을 입력해주세요"
                 required
               />
-            </div>
+            </S.DivInRegisterForm>
           </S.MiddleOfTopArea>
-          <div>
+          <S.DivInRegisterForm>
             <S.Ps style={{ marginBottom: "1vh" }}>어종</S.Ps>
             <S.SelectorsArea>
               {categories.map((categoryOption, index) => (
@@ -145,7 +145,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
                 />
               ))}
             </S.SelectorsArea>
-          </div>
+          </S.DivInRegisterForm>
         </S.RightTopArea>
       </S.TopArea>
       <S.AllBottoms>
@@ -156,13 +156,13 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
               value={location1}
               onChange={handleLocation1Change} // location1 변경 시 호출
             >
-              <option value="" disabled hidden>
+              <S.OptionInRegisterForm value="" disabled hidden>
                 시
-              </option>
+              </S.OptionInRegisterForm>
               {cityData.map((city) => (
-                <option key={city.city} value={city.city}>
+                <S.OptionInRegisterForm key={city.city} value={city.city}>
                   {city.city}
-                </option>
+                </S.OptionInRegisterForm>
               ))}
             </S.Local>
 
@@ -173,13 +173,13 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
                 updateLocation();
               }}
             >
-              <option value="" disabled hidden>
+              <S.OptionInRegisterForm value="" disabled hidden>
                 군
-              </option>
+              </S.OptionInRegisterForm>
               {location2Options.map((option) => (
-                <option key={option} value={option}>
+                <S.OptionInRegisterForm key={option} value={option}>
                   {option}
-                </option>
+                </S.OptionInRegisterForm>
               ))}
             </S.Local>
             <S.Inputs
@@ -193,14 +193,14 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
             />
           </S.MiddleLocal>
         </S.MiddleArea>
-        <div>
+        <S.DivInRegisterForm>
           <S.Ps style={{ marginBottom: "1vh" }}>상세설명</S.Ps>
           <S.DetailInfo
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
           />
-        </div>
+        </S.DivInRegisterForm>
         <S.ButtonArea>
             <S.SubmitBtn type="submit">등록</S.SubmitBtn>
             <S.CencelBtn onClick={handleGoBack}>취소</S.CencelBtn>
