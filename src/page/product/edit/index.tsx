@@ -6,7 +6,7 @@ import * as S from "./style"
 import hasoAxios from "@/libs/axios";
 import { toast } from "react-toastify";
 
-const ProductEditPage: React.FC = () => {
+const ProductEditPage = () => {
   const navigate = useNavigate();
   const { id: productId } = useParams<{ id: string }>(); // URL의 {id}에서 productId 추출
   const [product, setProduct] = useState<ProductData | null>(null);
