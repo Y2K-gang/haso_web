@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import ProductForm from "@/components/form/product/productRegisterForm"; // 작성 폼 컴포넌트 임포트
 import { ProductData } from "@/type/product.type";
 import hasoAxios from "@/libs/axios";
-import { toast } from "react-toastify";
+import { Toast } from "@/libs/toast";
 import { useNavigate, useParams } from "react-router-dom";
 
-const ProductEditPage: React.FC = () => {
+const ProductEditPage = () => {
   const [loading, setLoading] = useState(false);
   const { id: productId } = useParams<{ id: string }>(); // URL의 {id}에서 productId 추출
   const navigate = useNavigate();
@@ -16,11 +16,11 @@ const ProductEditPage: React.FC = () => {
       setLoading(true);
       // 서버에 데이터 보내기
       const response = await hasoAxios.postData("/product", productData);
-      toast.success("상품이 등록되었습니다!");
+      Toast("success", "상품이 등록되었습니다!");
       navigate(`/product/${productId}`); // 성공 시 상품 상세 페이지로 이동
     } catch (error) {
       console.error("상품 등록 실패", error);
-      toast.error("상품 등록에 실패했습니다.");
+      Toast("error", "상품 등록에 실패했습니다.");
     } finally {
       setLoading(false);
     }

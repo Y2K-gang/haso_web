@@ -5,6 +5,7 @@ import * as S from "./style";
 import hasoAxios from "@/libs/axios";
 import { ACCESS_TOKEN_KEY } from "@/constants/token/token.constants";
 import Cookies from "js-cookie";
+import { Toast } from "@/libs/toast"
 
 const RegisterProductPage: React.FC = () => {
   const [loading, setLoading] = useState(false);
@@ -21,7 +22,7 @@ const RegisterProductPage: React.FC = () => {
       // 토큰 가져오기
       const token = Cookies.get(ACCESS_TOKEN_KEY);
       if (!token) {
-        alert("로그인이 필요합니다.");
+        Toast("info", "로그인이 필요합니다.");
         return;
       }
   
@@ -39,7 +40,7 @@ const RegisterProductPage: React.FC = () => {
       });
   
       if (!isValid) {
-        alert("모든 필드를 작성해주세요.");
+        Toast("info", "모든 필드를 작성해주세요.");
         return; // 유효성 검사 실패 시 제출을 막음
       }
   
@@ -47,14 +48,14 @@ const RegisterProductPage: React.FC = () => {
       const response = await hasoAxios.postData("/product", data);
   
       console.log("제품 등록 성공:", response);
-      alert("제품 등록 완료!");
+      Toast("success", "제품 등록 완료!");
       // 필요시 페이지 이동 처리
     } catch (err: any) {
       console.error("제품 등록 실패:", err);
       setError(
         err.response?.data?.message || "제품 등록 중 오류가 발생했습니다."
       );
-      alert("제품 등록 실패: " + (err.response?.data?.message || "오류 발생"));
+      Toast("error", "제품 등록 실패: " + (err.response?.data?.message || "오류 발생"));
     } finally {
       setLoading(false);
     }
