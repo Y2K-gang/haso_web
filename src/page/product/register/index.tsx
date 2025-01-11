@@ -3,8 +3,6 @@ import ProductForm from "@/components/form/product/productRegisterForm";
 import { ProductData } from "@/type/product.type";
 import * as S from "./style";
 import hasoAxios from "@/libs/axios";
-import { ACCESS_TOKEN_KEY } from "@/constants/token/token.constants";
-import Cookies from "js-cookie";
 import { Toast } from "@/libs/toast"
 
 const RegisterProductPage: React.FC = () => {
@@ -18,13 +16,6 @@ const RegisterProductPage: React.FC = () => {
       // 초기화
       setLoading(true);
       setError(null);
-  
-      // 토큰 가져오기
-      const token = Cookies.get(ACCESS_TOKEN_KEY);
-      if (!token) {
-        Toast("info", "로그인이 필요합니다.");
-        return;
-      }
   
       // 입력값 유효성 검사 및 오류 표시
       inputs.forEach((input) => {
