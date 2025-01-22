@@ -5,26 +5,34 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
 
 jobs:
   qodana:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 22.11.0 # 노드 버전 22.11.0 고정
+      - name: Check if qodana-results folder exists
+        id: check_folder
+        run: |
+          if [ -d "qodana-results" ]; then
+            echo "Qodana results folder exists."
+            echo "exists=true" >> $GITHUB_ENV
+          else
+            echo "Qodana results folder does not exist."
+            echo "exists=false" >> $GITHUB_ENV
+          fi
 
-      - name: Install dependencies
-        run: npm install
+      - name: Run Qodana if results folder exists
+        if: env.exists == 'true'
+        run: |
+          docker run -v $(pwd):/mnt/project jetbrains/qodana:latest --project-dir /mnt/project -o /mnt/project/qodana-results -s -w
 
-      - name: Run Qodana Analysis
-        uses: JetBrains/qodana-action@v2024.3
-        with:
-          linter: jetbrains/qodana-js:2024.3
-          upload-result: true
-          use-cache: true
+      - name: Pull and run Qodana if results folder does not exist
+        if: env.exists == 'false'
+        run: |
+          docker pull jetbrains/qodana:latest
+          docker run -v $(pwd):/mnt/project -v $(pwd)/qodana-results:/data/results -p 8080:8080 jetbrains/qodana:latest --project-dir /mnt/project -o /data/results -s -w

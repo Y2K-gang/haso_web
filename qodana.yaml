@@ -1,29 +1,32 @@
-#-------------------------------------------------------------------------------#
-#               Qodana analysis is configured by qodana.yaml file               #
-#             https://www.jetbrains.com/help/qodana/qodana-yaml.html            #
-#-------------------------------------------------------------------------------#
 version: "1.0"
 
-#Specify inspection profile for code analysis
 profile:
   name: qodana.starter
 
-#Enable inspections
-#include:
-#  - name: <SomeEnabledInspectionId>
+include:
+  # 배열 뒤에 , 체크
+  - name: typescript:trailing-comma
 
-#Disable inspections
-#exclude:
-#  - name: <SomeDisabledInspectionId>
-#    paths:
-#      - <path/where/not/run/inspection>
+  # 불필요한 조건문을 검사
+  - name: typescript:no-unnecessary-condition
 
-#Execute shell command before Qodana execution (Applied in CI/CD pipeline)
-#bootstrap: sh ./prepare-qodana.sh
+  # boolean 타입 검사
+  - name: typescript:strict-boolean-expressions
 
-#Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)
-#plugins:
-#  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
+  # 특정 타입 사용 검사 (ex. function, object)
+  - name: typescript:ban-types
 
-#Specify Qodana linter for analysis (Applied in CI/CD pipeline)
-linter: jetbrains/qodana-js:2024.3
+  # console.log 검사:
+  - name: typescript:no-console
+
+
+
+plugins:
+  # TypeScript 관련 검사
+  - id: org.jetbrains.qodana.typescript
+
+  # ESLint 검사
+  - id: org.jetbrains.qodana.eslint
+
+  # 코드 테스트
+  - id: org.jetbrains.qodana.coverage
