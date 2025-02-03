@@ -2,7 +2,7 @@ import React from "react";
 import One from "@/page/auth/signup/steps/one";
 import Two from "@/page/auth/signup/steps/two";
 import Three from "@/page/auth/signup/steps/three";
-import { SignUpProps, ValidateProps } from "@/type/auth/index.type";
+import { SignUpProps, ValidateProps } from "@/type/auth/signup/signup.type";
 
 export interface StepProps {
     signUp: SignUpProps;

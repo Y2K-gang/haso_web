@@ -3,7 +3,7 @@ import * as S from "./style";
 import Form from "@/components/form/auth";
 import { SIGNUP_STEPS } from "./steps";
 import { useNavigate } from "react-router-dom";
-import { SignUpProps } from "@/type/auth/index.type";
+import { SignUpProps } from "@/type/auth/signup/signup.type";
 import LargeButton from "@/components/button/large";
 import MediumButton from "@/components/button/medium";
 import { Toast } from "@/libs/toast";

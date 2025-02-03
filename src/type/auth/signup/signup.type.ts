@@ -11,11 +11,6 @@ export interface SignUpProps {
     business_no: string; // 사업자 등록 번호
 }
 
-export interface LoginProps {
-    id: string;
-    password: string;
-}
-
 export interface ValidateProps extends SignUpProps {
     b_no: string; // 사업자 등록 번호
     start_dt: string; // 개업일자
