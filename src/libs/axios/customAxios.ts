@@ -33,6 +33,6 @@ class CustomAxiosService {
   }
 }
 
-const DaodaAxios = new CustomAxiosService(SERVER_URL).getInstance();
+const HasoAxios = new CustomAxiosService(SERVER_URL).getInstance();
 
-export default DaodaAxios;
+export default HasoAxios;
