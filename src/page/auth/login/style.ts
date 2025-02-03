@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
-
 `;
 
 

@@ -1,12 +1,14 @@
 import ReactDOM from "react-dom";
 import * as S from "./style";
-import { ModalProps } from "@/type/modal/modal.type";
+import useModalStore from "@/stores/modal/modal.store";
 
-const Modal = ({ isOpen, onClose, children }: ModalProps) => {
+const Modal = () => {
+  const { isOpen, isClose, children } = useModalStore();
+
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
-    <S.ModalOverlay onClick={onClose}>
+    <S.ModalOverlay onClick={isClose}>
       <S.ModalContent onClick={(e) => e.stopPropagation()}>
         {children}
       </S.ModalContent>

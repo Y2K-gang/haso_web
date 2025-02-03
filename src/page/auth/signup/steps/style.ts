@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 export const Label = styled.label`
-    font-size: ${({ theme }) => theme.typography.fontSizes.heading[3]};
-    font-family: "Pretendard-Semibold";
-    color: ${({ theme }) => theme.colors.text.Dark};
-    text-align: left;
+  font-size: ${({ theme }) => theme.typography.fontSizes.heading[3]};
+  font-family: "Pretendard-Semibold";
+  color: ${({ theme }) => theme.colors.text.Dark};
+  text-align: left;
 
-    @media (max-width: 768px) {
-        font-size: ${({ theme }) => theme.typography.fontSizes.heading[4]};
-    }
+  @media (max-width: 768px) {
+    font-size: ${({ theme }) => theme.typography.fontSizes.heading[4]};
+  }
 
-    @media (max-width: 480px) {
-        font-size: ${({ theme }) => theme.typography.fontSizes.body[2]};
-    }
+  @media (max-width: 480px) {
+    font-size: ${({ theme }) => theme.typography.fontSizes.body[2]};
+  }
 `;
 
 export const FormGap = styled.div`
@@ -46,7 +46,7 @@ export const ModalContent = styled.div`
   width: 100%;
   max-width: 500px;
   padding: 20px;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
