@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const DetailBack = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-height: 82vh;
-justify-content: space-between;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 654.36px;
+  justify-content: space-between;
+`;
 export const EditBtn = styled.button`
-  width: 13.8vw;
-  height: 7.5vh;
-  background-color: #327DFF;
+  width: 202.86px;
+  height: 59.85px;
+  background-color: #327dff;
   border: none;
   border-radius: 5px;
   color: #ffffff;
@@ -18,8 +18,8 @@ export const EditBtn = styled.button`
   font-weight: bold;
 `;
 export const DeleteBtn = styled.button`
-  width: 13.8vw;
-  height: 7.5vh;
+  width: 202.86px;
+  height: 59.85px;
   background-color: #ffffff;
   border: 1px solid black;
   border-radius: 5px;
@@ -28,5 +28,6 @@ export const DeleteBtn = styled.button`
   font-weight: bold;
 `;
 export const DivInDetailPage = styled.div`
-
-`
+  display: flex;
+  gap: 22.05px;
+`;

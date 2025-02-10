@@ -71,7 +71,7 @@ const ProductDetailsPage: React.FC = () => {
     <S.DetailBack>
       <ProductDetails product={product} />
       {isOwner ? (
-        <S.DivInDetailPage style={{ display: "flex", gap: "1.5vw" }}>
+        <S.DivInDetailPage>
           <S.EditBtn
             onClick={handleEditClick}
           >

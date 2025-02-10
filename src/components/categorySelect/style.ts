@@ -7,10 +7,10 @@ interface CateBackProps {
 export const CateBack = styled.div<CateBackProps>`
   background-color: ${({ isSelected }) => (isSelected ? "#327DFF" : "#E8E8E8")};
   color: ${({ isSelected }) => (isSelected ? "#FFFFFF" : "#000000")};
-  width: 8.5vw;
-  height: 6.5vh;
+  width: 124.95px;
+  height: 51.87px;
   border-radius: 5px;
-  padding: 0.5vh 0.5vw;
+  padding: 3.99px 7.35px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -18,8 +18,8 @@ export const CateBack = styled.div<CateBackProps>`
   font-size: 20px;
   cursor: pointer;
   transition: background-color 0.1s, color 0.1s; /* 부드러운 전환 효과 */
-  
+
   img {
-    width: 1.3vw;
+    width: 19.11px;
   }
 `;

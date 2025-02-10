@@ -101,7 +101,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
         </S.DivInRegisterForm>
         <S.RightTopArea>
           <S.DivInRegisterForm>
-            <S.Ps style={{ marginBottom: "1vh" }}>제목</S.Ps>
+            <S.Ps>제목</S.Ps>
             <S.Inputs
               type="text"
               value={title}
@@ -112,7 +112,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
           </S.DivInRegisterForm>
           <S.MiddleOfTopArea>
             <S.DivInRegisterForm>
-              <S.Ps style={{ marginBottom: "1vh" }}>단가</S.Ps>
+              <S.Ps>단가</S.Ps>
               <S.PriceInput
                 type="number"
                 value={unitPrice}
@@ -122,7 +122,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
               />
             </S.DivInRegisterForm>
             <S.DivInRegisterForm>
-              <S.Ps style={{ marginBottom: "1vh" }}>수량</S.Ps>
+              <S.Ps>수량</S.Ps>
               <S.QuantityInput
                 type="number"
                 value={quantity}
@@ -134,7 +134,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
             </S.DivInRegisterForm>
           </S.MiddleOfTopArea>
           <S.DivInRegisterForm>
-            <S.Ps style={{ marginBottom: "1vh" }}>어종</S.Ps>
+            <S.Ps>어종</S.Ps>
             <S.SelectorsArea>
               {categories.map((categoryOption, index) => (
                 <CategorySelector
@@ -194,7 +194,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
           </S.MiddleLocal>
         </S.MiddleArea>
         <S.DivInRegisterForm>
-          <S.Ps style={{ marginBottom: "1vh" }}>상세설명</S.Ps>
+          <S.Ps>상세설명</S.Ps>
           <S.DetailInfo
             value={description}
             onChange={(e) => setDescription(e.target.value)}

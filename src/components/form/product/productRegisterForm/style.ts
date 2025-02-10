@@ -3,30 +3,30 @@ import styled from "styled-components";
 export const AllWriteArea = styled.form`
   display: flex;
   flex-direction: column;
-  width: 60vw;
+  width: 882px;
 `;
 export const TopArea = styled.div`
-  margin-top: 9vh;
+  margin-top: 71.82px;
   display: flex;
   width: 100%;
   justify-content: space-between;
 `;
 export const RightTopArea = styled.div`
-  width: 30vw;
-  height: 50vh;
+  width: 441px;
+  height: 399px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `;
 export const MiddleArea = styled.div`
-  margin-top: 3.5vh;
+  margin-top: 27.93px;
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 `;
 export const MiddleLocal = styled.div`
-  width: 51.5vw;
+  width: 757.05px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@ export const ButtonArea = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  gap: 1.5vw;
+  gap: 22.05px;
 `;
 
 export const MiddleOfTopArea = styled.div`
@@ -45,8 +45,8 @@ export const MiddleOfTopArea = styled.div`
 
 export const FileInputWrapper = styled.div`
   background-color: #d1d1d1;
-  width: 50vh;
-  height: 50vh;
+  width: 399px;
+  height: 399px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,16 +65,16 @@ export const DetailInfo = styled.textarea`
   color: black;
   font-size: 16px;
   font-family: pretandard;
-  padding: 1.5vh 1vw;
+  padding: 11.97px 14.7px;
   resize: none;
   width: 100%;
-  height: 40vh;
+  height: 319.2px;
   &::placeholder {
     color: #d1d1d1;
     font-size: 16px;
   }
   &:focus {
-    border: 2px solid #327DFF;
+    border: 2px solid #327dff;
     outline: none;
   }
   &.error {
@@ -87,8 +87,8 @@ const InputBase = styled.input`
   border-radius: 5px;
   color: black;
   font-size: 16px;
-  padding: 0 1vw;
-  height: 6.5vh;
+  padding: 0 14.7px;
+  height: 51.87px;
   &::placeholder {
     color: #d1d1d1;
     font-size: 16px;
@@ -102,7 +102,7 @@ const InputBase = styled.input`
     margin: 0;
   }
   &:focus {
-    border: 2px solid #327DFF;
+    border: 2px solid #327dff;
     outline: none;
   }
   &.error {
@@ -112,57 +112,58 @@ const InputBase = styled.input`
 
 // Inputs들 글자수 제한 추가하기
 export const Inputs = styled(InputBase)`
-  width: 30vw;
+  width: 441px;
 `;
 
 export const PriceInput = styled(InputBase)`
-  width: 17.5vw;
+  width: 257.25px;
 `;
 
 export const QuantityInput = styled(InputBase)`
-  width: 11.5vw;
+  width: 169.05px;
 `;
 
 export const Ps = styled.p`
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 7.98px;
 `;
 export const SelectorsArea = styled.div`
-height: 15vh;
-display: flex;
+  height: 119.7px;
+  display: flex;
   flex-wrap: wrap;
-  gap: 1vw;
+  gap: 14.7px;
   justify-content: space-between;
 `;
 
 export const Local = styled.select`
   border: 2px solid #d1d1d1;
   border-radius: 5px;
-  width: 10vw;
-  height: 6.5vh;
-  padding-left: 1vw;
-  padding-right: 3vw;
+  width: 147px;
+  height: 51.87px;
+  padding-left: 14.7px;
+  padding-right: 44.1px;
   font-size: 16px;
   appearance: none;
-  background-image: url('src/assets/image/vector.svg');
+  background-image: url("src/assets/image/vector.svg");
   background-repeat: no-repeat;
   background-position: right 10px center;
-  background-size: 1.2vw;
-  &:hover{
+  background-size: 17.64px;
+  &:hover {
     cursor: pointer;
   }
 `;
 export const AllBottoms = styled.div`
-  height: 68vh;
+  height: 542.64px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 20vh;
+  margin-bottom: 159.6px;
 `;
 export const SubmitBtn = styled.button`
-  width: 13.8vw;
-  height: 7.5vh;
-  background-color: #327DFF;
+  width: 202.86px;
+  height: 59.85px;
+  background-color: #327dff;
   border: none;
   border-radius: 5px;
   color: #ffffff;
@@ -170,8 +171,8 @@ export const SubmitBtn = styled.button`
   font-weight: bold;
 `;
 export const CencelBtn = styled.button`
-  width: 13.8vw;
-  height: 7.5vh;
+  width: 202.86px;
+  height: 59.85px;
   background-color: #ffffff;
   border: 1px solid black;
   border-radius: 5px;
@@ -180,10 +181,6 @@ export const CencelBtn = styled.button`
   font-weight: bold;
 `;
 
-export const DivInRegisterForm = styled.div`
+export const DivInRegisterForm = styled.div``;
 
-`;
-
-export const OptionInRegisterForm = styled.option`
-
-`;
+export const OptionInRegisterForm = styled.option``;
