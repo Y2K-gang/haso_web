@@ -1,34 +1,33 @@
 import styled from "styled-components";
 
 export const BusinessHistoryAll = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 export const HistoryListTopArea = styled.div`
-    margin-top: 3vh;
-    padding-right: 2vw;
-    width: 90vw;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin-top: 23.94px;
+  padding-right: 29.4px;
+  width: 1323px;
+  height: 79.8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const BusinessFontArea = styled.div`
-    width: 22vw;
-    font-size: ${({ theme }) => theme.typography.fontSizes.Title[3]};
-    font-family: "Pretendard-Bold";
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-`
+  width: 323.4px;
+  font-size: ${({ theme }) => theme.typography.fontSizes.Title[3]};
+  font-family: "Pretendard-Bold";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 export const BusinessVector = styled.img`
-    width: 1.2vw;
+  width: 17.64px;
 
-    &:hover{
-        cursor: pointer;
-    }
-
-`
+  &:hover {
+    cursor: pointer;
+  }
+`;

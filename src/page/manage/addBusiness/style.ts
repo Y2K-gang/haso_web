@@ -4,12 +4,12 @@ export const AddBusiness = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 190vh;
+  height: 1516.2px;
   background-color: ${({ theme }) => theme.colors.gray[100]};
-  gap: 4.5vh;
+  gap: 35.91px;
 `;
 export const AddBusinessTitle = styled.span`
-  margin-top: 13vh;
+  margin-top: 103.74px;
   font-size: ${({ theme }) => theme.typography.fontSizes.Title[1]};
   font-family: "Pretendard-Bold";
 `;

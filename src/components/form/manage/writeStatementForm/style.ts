@@ -4,11 +4,11 @@ export const AddBusinessContents = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3vw;
+  gap: 44.1px;
 `;
 export const TradeDate = styled.span`
-  padding: 0.3vw;
-  width: 10vw;
+  padding: 4.41px;
+  width: 147px;
   display: flex;
   justify-content: center;
   font-size: 18px;
@@ -19,13 +19,13 @@ export const TradeDate = styled.span`
 export const TradeDates = styled.div`
   display: flex;
   align-items: center;
-  gap: 2.5vw;
+  gap: 36.75px;
 `;
 export const ClientsInfos = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 65vw;
-  height: 20vh;
+  width: 955.5px;
+  height: 159.6px;
 `;
 export const ClientsInfosGroups = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ export const ClientsInfosGroups = styled.div`
 export const FontsArea = styled.div`
   display: flex;
   align-items: center;
-  gap: 5vw;
+  gap: 73.5px;
 `;
 
 export const Container = styled.div`
@@ -56,8 +56,8 @@ export const TitleSpans = styled.span`
 `;
 export const AddBusinessMiddle = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
-  width: 75vw;
-  height: 40vh;
+  width: 1102.5px;
+  height: 319.2px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -66,9 +66,9 @@ export const AddBusinessMiddle = styled.div`
 `;
 
 export const Table1 = styled.table`
-  width: 75vw;
+  width: 1102.5px;
   border-collapse: separate;
-  border-spacing: 0 1.5vh;
+  border-spacing: 0 11.97px;
   table-layout: fixed;
 
   thead {
@@ -77,7 +77,7 @@ export const Table1 = styled.table`
     th {
       background-color: ${({ theme }) => theme.colors.gray[400]};
       border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
-      padding: 1vw;
+      padding: 14.7px;
       text-align: center;
       font-size: 20px;
       font-weight: bold;
@@ -103,7 +103,7 @@ export const Table1 = styled.table`
 
       input {
         width: 100%;
-        height: 5.5vh;
+        height: 43.89px;
         border: none;
         font-size: 16px;
         text-align: center;
@@ -122,9 +122,9 @@ export const Table1 = styled.table`
 `;
 
 export const AddressInput = styled.input`
-  width: 23vw;
-  height: 5.5vh;
-  padding: 1vw;
+  width: 338.1px;
+  height: 43.89px;
+  padding: 14.7px;
   border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.gray[600]};
   font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
@@ -139,10 +139,10 @@ export const SecondTitle = styled.span`
 `;
 
 export const Table2 = styled.table`
-  width: 75vw;
+  width: 1102.5px;
   border-collapse: separate;
   border-spacing: 0;
-  margin-bottom: 1.5vh;
+  margin-bottom: 11.97px;
 
   thead {
     background-color: #f4f4f4;
@@ -150,8 +150,8 @@ export const Table2 = styled.table`
     th {
       background-color: ${({ theme }) => theme.colors.gray[400]};
       border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
-      padding-left: 0.5vw;
-      padding-right: 0.5vw;
+      padding-left: 7.35px;
+      padding-right: 7.35px;
       text-align: center;
       font-size: ${({ theme }) => theme.typography.fontSizes.heading[4]};
       font-family: "Pretendard-Semibold";
@@ -173,7 +173,7 @@ export const Table2 = styled.table`
 
       input {
         width: 100%;
-        height: 5.5vh;
+        height: 43.89px;
         border: none;
         font-size: 16px;
         text-align: center;
@@ -191,7 +191,7 @@ export const Table2 = styled.table`
   }
 `;
 export const Table3 = styled.table`
-  width: 75vw;
+  width: 1102.5px;
   border-collapse: separate;
   border-spacing: 0;
 
@@ -199,11 +199,11 @@ export const Table3 = styled.table`
     background-color: #f4f4f4;
 
     th {
-      width: 10vw;
+      width: 147px;
       background-color: ${({ theme }) => theme.colors.gray[400]};
       border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
-      padding-left: 0.5vw;
-      padding-right: 0.5vw;
+      padding-left: 7.35px;
+      padding-right: 7.35px;
       text-align: center;
       font-size: ${({ theme }) => theme.typography.fontSizes.heading[4]};
       font-family: "Pretendard-Semibold";
@@ -225,7 +225,7 @@ export const Table3 = styled.table`
 
       input {
         width: 100%;
-        height: 5.5vh;
+        height: 43.89px;
         border: none;
         font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
         font-family: "Pretendard-Medium";
