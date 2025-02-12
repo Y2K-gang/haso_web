@@ -12,8 +12,8 @@ Icon
 .idea/
 .env
 
-# Storybook build directory
-storybook-static/
+# Qodana build directory
+qodana-results/
 
 
 # Thumbnails

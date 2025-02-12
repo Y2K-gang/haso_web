@@ -1,9 +1,8 @@
-// types/theme.ts
-import { Colors } from '@/design/color'
-import { fonts } from '@/design/fonts'
-import { Shadow } from '@/design/shadow'
+import { Colors } from "@/design/color";
+import { fonts } from "@/design/fonts";
+import { Shadow } from "@/design/shadow";
+import { Shape } from "@/design/shape";
 
-// 기본 theme 객체 정의
 const defaultTheme = {
   colors: {
     primary: Colors.Primary,
@@ -42,7 +41,8 @@ const defaultTheme = {
     },
   },
   shadow: Shadow,
-} as const
+  borderRadius: Shape,
+} as const;
 
-export type Theme = typeof defaultTheme
-export const theme = defaultTheme
+export type Theme = typeof defaultTheme;
+export const theme = defaultTheme;
