@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 1470px;
-  height: 798px;
+  width: 100%;
+  height: 100%;
   background: ${({ theme }) => theme.colors.gray[200]};
   border-radius: ${({ theme }) => theme.borderRadius.large};
   display: flex;

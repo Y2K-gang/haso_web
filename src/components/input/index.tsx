@@ -1,7 +1,7 @@
 import * as S from "./style";
-import React from "react";
+import { InputProps } from "@/type/input/input.type";
 
-const Input = ({ placeHolder }) => {
+const Input = ({ placeHolder }: InputProps) => {
   return (
     <S.InputAll placeholder={placeHolder}></S.InputAll>
   );
