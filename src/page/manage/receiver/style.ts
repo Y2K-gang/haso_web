@@ -5,13 +5,13 @@ export const ProviderAll = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.gray[100]};
-  row-gap: 35.91px;
+  row-gap: 36px;
 `;
 
 export const ProviderTop = styled.div`
-  margin-top: 47.88px;
+  margin-top: 47px;
   width: 1323px;
-  height: 131.92px;
+  height: 132px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,7 @@ export const ProviderTopOfTop = styled.div`
   justify-content: center;
   font-size: ${({ theme }) => theme.typography.fontSizes.Title[1]};
   font-family: "Pretendard-Bold";
-  margin-bottom: 39.9px;
+  margin-bottom: 40px;
 `;
 
 export const ProviderHeader = styled.span`
@@ -34,9 +34,9 @@ export const ProviderHeader = styled.span`
 `;
 
 export const StatementVector = styled.img`
-  width: 17.64px;
+  width: 18px;
   position: absolute;
-  left: 73.5px;
+  left: 74px;
 
   &:hover {
     cursor: pointer;
@@ -45,8 +45,8 @@ export const StatementVector = styled.img`
 
 export const ProviderMiddle = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
-  width: 1102.5px;
-  height: 319.2px;
+  width: 930px;
+  height: 319px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ export const ContentsSpans = styled.span`
   font-family: "KimJungChulGothic"; /* 폰트 수정필요 */
 `;
 export const TradeDate = styled.span`
-  padding: 4.41px;
+  padding: 4px;
   width: 147px;
   display: flex;
   justify-content: center;
@@ -75,46 +75,46 @@ export const TradeDate = styled.span`
 export const TradeDates = styled.div`
   display: flex;
   align-items: center;
-  gap: 36.75px;
+  gap: 37px;
 `;
 export const ClientsInfos = styled.div`
   display: flex;
   justify-content: space-between;
   width: 1029px;
-  height: 159.6px;
+  height: 160px;
 `;
 export const ClientsInfosGroups = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 470.4px;
+  width: 470px;
 `;
 export const FontsArea = styled.div`
   display: flex;
   align-items: center;
-  gap: 73.5px;
+  gap: 74px;
 `;
 export const ReceiverBottom = styled.div`
-  gap: 23.94px;
-  width: 1073.1px;
+  gap: 24px;
+  width: 1073px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 67.83px;
+  margin-bottom: 68px;
 `;
 export const ReceiverTables = styled.div``;
 
 export const TradeTop = styled.table`
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 11.97px;
+  border-spacing: 0 12px;
   table-layout: fixed;
 
   th {
     background-color: ${({ theme }) => theme.colors.gray[400]};
     border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
-    padding: 15.96px;
+    padding: 16px;
     text-align: center;
     font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
     font-family: "Pretendard-Bold";
@@ -124,7 +124,7 @@ export const TradeTop = styled.table`
     background-color: ${({ theme }) => theme.colors.white};
     border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
     text-align: center;
-    padding: 15.96px;
+    padding: 16px;
     font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
     font-family: "Pretendard-Medium";
   }
@@ -147,7 +147,7 @@ export const TableMiddle = styled.table`
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  margin-bottom: 11.97px;
+  margin-bottom: 12px;
   td {
     width: 147px;
     background-color: ${({ theme }) => theme.colors.white};
@@ -159,7 +159,7 @@ export const TableMiddle = styled.table`
   th {
     background-color: ${({ theme }) => theme.colors.gray[400]};
     border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
-    padding: 15.96px 1.47px;
+    padding: 16px 1.5px;
     text-align: center;
     font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
     font-family: "Pretendard-Bold";
@@ -181,10 +181,10 @@ export const TableBottom = styled.table`
   border-spacing: 0;
 
   td {
-    width: 352.8px;
+    width: 353px;
     background-color: ${({ theme }) => theme.colors.white};
     text-align: center;
-    padding: 15.96px;
+    padding: 16px;
     font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
     font-family: "Pretendard-Medium";
   }
@@ -192,7 +192,7 @@ export const TableBottom = styled.table`
   th {
     background-color: ${({ theme }) => theme.colors.gray[400]};
     border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
-    padding: 15.96px 29.4px;
+    padding: 16px 30px;
     text-align: center;
     font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
     font-family: "Pretendard-Bold";

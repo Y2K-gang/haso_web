@@ -6,10 +6,10 @@ export const ClientAll = styled.div`
   align-items: center;
 `;
 export const ClientListTopArea = styled.div`
-  margin-top: 23.94px;
-  padding-right: 29.4px;
-  width: 1367.1px;
-  height: 79.8px;
+  margin-top: 24px;
+  padding-right: 30px;
+  width: 1367px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +18,7 @@ export const ClientListTopArea = styled.div`
 `;
 
 export const WasteImg = styled.img`
-  width: 29.4px;
+  width: 30px;
   &:hover {
     cursor: pointer;
   }

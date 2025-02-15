@@ -6,17 +6,17 @@ export const BusinessHistoryAll = styled.div`
   align-items: center;
 `;
 export const HistoryListTopArea = styled.div`
-  margin-top: 23.94px;
-  padding-right: 29.4px;
+  margin-top: 24px;
+  padding-right: 30px;
   width: 1323px;
-  height: 79.8px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
 export const BusinessFontArea = styled.div`
-  width: 323.4px;
+  width: 323px;
   font-size: ${({ theme }) => theme.typography.fontSizes.Title[3]};
   font-family: "Pretendard-Bold";
   display: flex;
@@ -25,7 +25,7 @@ export const BusinessFontArea = styled.div`
 `;
 
 export const BusinessVector = styled.img`
-  width: 17.64px;
+  width: 18px;
 
   &:hover {
     cursor: pointer;

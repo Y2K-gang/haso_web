@@ -25,8 +25,8 @@ export const BackGround = styled.div`
 
 export const PrimaryCircle = styled.div`
   position: absolute;
-  width: 514.5px;
-  height: 514.5px;
+  width: 35vw;
+  height: 35vw;
   background: rgba(50, 125, 255, 0.7);
   filter: blur(15px);
   border-radius: 100%;
@@ -36,8 +36,8 @@ export const PrimaryCircle = styled.div`
 
 export const SecondaryCircle = styled.div`
   position: absolute;
-  width: 514.5px;
-  height: 514.5px;
+  width: 35vw;
+  height: 35vw;
   background: rgba(79, 209, 197, 0.7);
   filter: blur(15px);
   border-radius: 100%;

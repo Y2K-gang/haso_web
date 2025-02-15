@@ -9,14 +9,14 @@ export const Container = styled.div`
 
   img {
     width: 100%;
-    height: 319.2px;
+    height: 319px;
     object-fit: cover;
   }
 
   .slick-dots {
     display: flex;
     position: absolute;
-    bottom: 23.94px;
+    bottom: 24px;
     list-style: none;
     margin: 0;
     padding: 0;

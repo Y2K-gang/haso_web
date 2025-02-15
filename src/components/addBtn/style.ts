@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const AddBtnBack = styled.div`
   background-color: ${({ theme }) => theme.colors.primary[400]};
-  width: 95.55px;
-  height: 95.55px;
+  width: 100px;
+  height: 100px;
   border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
-  right: 51.45px;
-  bottom: 47.88px;
+  right: 50px;
+  bottom: 47px;
   &:hover {
     cursor: pointer;
   }
