@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./style";
-import plusImg from "@/assets/image/plus.svg";
-import checkImg from "@/assets/image/check.svg";
+import PlusImg from "@/components/icons/plus";
+import CheckImg from "@/components/icons/check";
 
 interface CategoryProps {
   category: string;
@@ -9,15 +9,10 @@ interface CategoryProps {
   onClick: () => void;
 }
 
-
-const CategorySelector: React.FC<CategoryProps> = ({
-  category,
-  isSelected,
-  onClick,
-}) => {
+const CategorySelector = ({ category, isSelected, onClick }: CategoryProps) => {
   return (
     <S.CateBack onClick={onClick} isSelected={isSelected}>
-      <img src={isSelected ? checkImg : plusImg} />
+      {isSelected ? <CheckImg /> : <PlusImg />}
       {category}
     </S.CateBack>
   );

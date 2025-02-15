@@ -5,7 +5,7 @@ import * as S from "./style";
 import hasoAxios from "@/libs/axios";
 import { Toast } from "@/libs/toast"
 
-const RegisterProductPage: React.FC = () => {
+const RegisterProductPage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 

@@ -6,7 +6,7 @@ import ChatButton from "@/components/XLargeButton";
 import hasoAxios from "@/libs/axios";
 import { ProductData } from "@/type/product.type";
 
-const ProductDetailsPage: React.FC = () => {
+const ProductDetailsPage = () => {
   const navigate = useNavigate();
   const { productId } = useParams<{ productId: string }>(); // URL 파라미터에서 productId 가져오기
   const [product, setProduct] = useState<ProductData | null>(null);

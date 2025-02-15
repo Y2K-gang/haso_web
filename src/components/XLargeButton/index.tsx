@@ -1,11 +1,10 @@
-import React from 'react';
 import * as S from "./style";
 
 interface XLargeButtonProps {
   text: string;
 }
 
-const XLargeButton: React.FC<XLargeButtonProps> = ({ text }) => {
+const XLargeButton = ({ text }: XLargeButtonProps) => {
 
   return (
     <S.XLargeButton>{text}</S.XLargeButton>

@@ -6,10 +6,7 @@ interface ProductEditFormProps {
   onSave: (updatedProduct: ProductData) => void;
 }
 
-const ProductEditForm: React.FC<ProductEditFormProps> = ({
-  product,
-  onSave,
-}) => {
+const ProductEditForm = ({ product, onSave }: ProductEditFormProps) => {
   const [updatedProduct, setUpdatedProduct] = useState<ProductData>(product);
 
   useEffect(() => {

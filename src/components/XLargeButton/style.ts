@@ -6,7 +6,7 @@ export const XLargeButton = styled.button`
   align-items: center;
   width: 1029px;
   height: 71.82px;
-  background-color: #327dff;
+  background-color: ${({theme}) => theme.colors.primary[400]};
   border-radius: 10px;
   border: none;
   font-size: 24px;

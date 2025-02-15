@@ -6,8 +6,7 @@ type ProductDetailsProps = {
   product: ProductData;
 };
 
-const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
-  const renderImages = () => {
+const ProductDetails = ({ product }: ProductDetailsProps) => {
     if (!product.images || product.images.length === 0) {
       return <p>이미지가 없습니다.</p>;
     }

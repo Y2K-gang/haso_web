@@ -10,7 +10,7 @@ interface ProductFormProps {
   onSubmit: (data: ProductData) => void;
 }
 
-const ProductForm: React.FC<ProductFormProps> = ({ initialData, onSubmit }) => {
+const ProductForm = ({ initialData, onSubmit }: ProductFormProps) => {
   const [title, setTitle] = useState(initialData?.title || "");
   const [images, setImages] = useState<File[]>([]);
   const [quantity, setQuantity] = useState(initialData?.quantity);
