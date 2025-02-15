@@ -17,7 +17,7 @@ export const ManageProductBack = styled.div`
 `;
 
 export const ManageProductContents = styled.div`
-  width: 83vw;
+  width: 1220px;
   display: flex;
   justify-content: space-between;
   align-items: center;

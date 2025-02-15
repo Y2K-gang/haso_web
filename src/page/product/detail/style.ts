@@ -4,12 +4,12 @@ export const DetailBack = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 654.36px;
+  height: 880px;
   justify-content: space-between;
 `;
 export const EditBtn = styled.button`
-  width: 202.86px;
-  height: 59.85px;
+  width: 200px;
+  height: 60px;
   background-color: #327dff;
   border: none;
   border-radius: 5px;
@@ -18,8 +18,8 @@ export const EditBtn = styled.button`
   font-weight: bold;
 `;
 export const DeleteBtn = styled.button`
-  width: 202.86px;
-  height: 59.85px;
+  width: 200px;
+  height: 60px;
   background-color: #ffffff;
   border: 1px solid black;
   border-radius: 5px;
@@ -29,5 +29,5 @@ export const DeleteBtn = styled.button`
 `;
 export const DivInDetailPage = styled.div`
   display: flex;
-  gap: 22.05px;
+  gap: 22px;
 `;

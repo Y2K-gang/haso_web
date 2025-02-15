@@ -6,7 +6,7 @@ export const AllWriteArea = styled.form`
   width: 882px;
 `;
 export const TopArea = styled.div`
-  margin-top: 71.82px;
+  margin-top: 72px;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -35,7 +35,7 @@ export const ButtonArea = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  gap: 22.05px;
+  gap: 22px;
 `;
 
 export const MiddleOfTopArea = styled.div`
@@ -161,8 +161,8 @@ export const AllBottoms = styled.div`
   margin-bottom: 159.6px;
 `;
 export const SubmitBtn = styled.button`
-  width: 202.86px;
-  height: 59.85px;
+  width: 200px;
+  height: 60px;
   background-color: #327dff;
   border: none;
   border-radius: 5px;
@@ -171,8 +171,8 @@ export const SubmitBtn = styled.button`
   font-weight: bold;
 `;
 export const CencelBtn = styled.button`
-  width: 202.86px;
-  height: 59.85px;
+  width: 200px;
+  height: 60px;
   background-color: #ffffff;
   border: 1px solid black;
   border-radius: 5px;
