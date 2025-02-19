@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import * as S from "./style";
-import React from "react";
 import InfoEditForm from "@/components/form/editInfoForm";
+import LargeButton from "@/components/button/large";
+import SmallButton from "@/components/button/small";
 
 const InfoEdit = () => {
   const navigate = useNavigate();
@@ -15,14 +16,15 @@ const InfoEdit = () => {
           <S.StyledLeftArrowIcon />
         </S.MyPostImgDiv>
         <S.EditDetails>
-          <S.TitleEditArea>
+          <S.TitleEditArea1>
             <S.TitleEdit1>정보수정</S.TitleEdit1>
-          </S.TitleEditArea>
+          </S.TitleEditArea1>
           <InfoEditForm />
-          <S.TitleEditArea>
+          <LargeButton children='저장하기' />
+          <S.TitleEditArea2>
             <S.TitleEdit2>회원탈퇴 및 계정삭제</S.TitleEdit2>
-          </S.TitleEditArea>
-          {/* 버튼 추가 */}
+            <SmallButton variant="secondary" children="삭제하기" />
+          </S.TitleEditArea2>
         </S.EditDetails>
       </S.InfoEditSecondArea>
     </S.InfoEditAll>

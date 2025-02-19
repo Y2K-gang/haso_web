@@ -12,28 +12,34 @@ export const InfoEditSecondArea = styled.div`
   width: 1090px;
 `;
 export const TitleEdit1 = styled.span`
-height: 30px;
-width: 80px;
-display: flex;
-align-items: start;
-justify-content: center;
+  height: 30px;
+  width: 80px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
   font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
   font-family: "Pretendard-Bold";
-  border-bottom: 3px solid ${({theme}) => theme.colors.primary[400]};
+  border-bottom: 3px solid ${({ theme }) => theme.colors.primary[400]};
 `;
 export const TitleEdit2 = styled.span`
-height: 30px;
-width: 170px;
-display: flex;
-align-items: start;
-justify-content: center;
+  height: 30px;
+  width: 170px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
   font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
   font-family: "Pretendard-Bold";
-  border-bottom: 3px solid ${({theme}) => theme.colors.primary[400]};
+  border-bottom: 3px solid ${({ theme }) => theme.colors.primary[400]};
 `;
-export const TitleEditArea = styled.div`
+export const TitleEditArea1 = styled.div`
   width: 1090px;
-  border-bottom: 1px solid ${({theme}) => theme.colors.gray[500]};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray[500]};
+`;
+export const TitleEditArea2 = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 1090px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray[500]};
 `;
 export const EditDetails = styled.div`
   display: flex;

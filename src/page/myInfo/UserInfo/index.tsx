@@ -52,7 +52,7 @@ const UserInfo = () => {
           <S.UserInfoProductWrapper>
             <TabBar title="내 게시물" onMoreClick={onMoreClick} />
             <S.ProductCardContainer>
-              {products.slice(0, 3).map((product, index) => (
+              {products.map((product, index) => (
                 <ProductCard
                   key={index}
                   title={product.title}
