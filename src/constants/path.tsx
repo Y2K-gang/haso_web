@@ -8,5 +8,5 @@ export const paths = {
     statementReceiver: '/statement/:userId/:productId/receiver',
     statementProvider: '/statement/:userId/:productId/provider',
     addClient: '/addClient?',
-    addBusiness: '/addBusiness'
+    addBusiness: '/addBusiness',
 } as const;

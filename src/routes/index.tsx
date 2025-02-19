@@ -10,6 +10,7 @@ import ProviderPage from "@/page/manage/provider";
 import ReceiverPage from "@/page/manage/receiver";
 import AddClient from "@/page/manage/addClient";
 import AddBusiness from "@/page/manage/addBusiness";
+import NonFound from "@/page/nonFound";
 
 const Router = () => (
   <BrowserRouter>
@@ -24,6 +25,7 @@ const Router = () => (
       <Route path={paths.statementReceiver} element={<ReceiverPage />} />
       <Route path={paths.addClient} element={<AddClient />} />
       <Route path={paths.addBusiness} element={<AddBusiness />} />
+      {/*<Route path="*" element={<NonFound />} />*/}
     </Routes>
   </BrowserRouter>
 );
