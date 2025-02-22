@@ -16,7 +16,7 @@ export const ManageUserBack = styled.div`
   }
 `;
 export const ManageUserContents = styled.div`
-  width: 83vw;
+  width: 1220px;
   display: flex;
   justify-content: space-between;
   align-items: center;
