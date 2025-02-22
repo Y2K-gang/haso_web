@@ -6,6 +6,9 @@ import Main from "@/page/main";
 import ProductEdit from "@/page/product/edit";
 import ProductWrite from "@/page/product/register";
 import ProductDetail from "@/page/product/detail";
+import UserInfo from "@/page/myInfo/UserInfo";
+import MyPosts from "@/page/myInfo/myPosts";
+import InfoEdit from "@/page/myInfo/infoEdit";
 import ClientList from "@/page/manage/clientList";
 import BusinessHistory from "@/page/manage/businessHistory";
 import Statement from "@/page/manage/statement";
@@ -30,6 +33,9 @@ const Router = () => (
       <Route path={paths.productDetail} element={<ProductDetail />} />
       <Route path={paths.productEdit} element={<ProductEdit />} />
       <Route path={paths.productWrite} element={<ProductWrite />} />
+      <Route path={paths.myInformation} element={<UserInfo />} />
+      <Route path={paths.myPosts} element={<MyPosts />} />
+      <Route path={paths.infoEdit} element={<InfoEdit />} />
     </Routes>
   </BrowserRouter>
 );
