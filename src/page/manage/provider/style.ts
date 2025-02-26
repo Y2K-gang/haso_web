@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 export const ProviderAll = styled.div`
-  /* height: 110vh; */
+  /* height: 877.8px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.gray[100]};
-  row-gap: 4.5vh;
+  row-gap: 36px;
 `;
 
 export const ProviderTop = styled.div`
-  margin-top: 6vh;
-  width: 90vw;
-  height: 14vh;
+  margin-top: 47px;
+  width: 1323px;
+  height: 132px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,13 +20,13 @@ export const ProviderTop = styled.div`
 `;
 
 export const ProviderTopOfTop = styled.div`
-  width: 90vw;
+  width: 1323px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   font-size: ${({ theme }) => theme.typography.fontSizes.Title[1]};
   font-family: "Pretendard-Bold";
-  margin-bottom: 5vh;
+  margin-bottom: 40px;
 `;
 
 export const ProviderHeader = styled.span`
@@ -35,9 +35,9 @@ export const ProviderHeader = styled.span`
 `;
 
 export const StatementVector = styled.img`
-  width: 1.2vw;
+  width: 18px;
   position: absolute;
-  left: 5vw;
+  left: 74px;
 
   &:hover {
     cursor: pointer;
@@ -46,8 +46,8 @@ export const StatementVector = styled.img`
 
 export const ProviderMiddle = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
-  width: 75vw;
-  height: 40vh;
+  width: 930px;
+  height: 319px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -64,8 +64,8 @@ export const ContentsSpans = styled.span`
   font-family: Kim jung chul Gothic;
 `;
 export const TradeDate = styled.span`
-  padding: 0.3vw;
-  width: 10vw;
+  padding: 4px;
+  width: 147px;
   display: flex;
   justify-content: center;
   font-size: 18px;
@@ -76,41 +76,41 @@ export const TradeDate = styled.span`
 export const ClientsInfos = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 70vw;
-  height: 20vh;
+  width: 1029px;
+  height: 160px;
 `;
 export const ClientsInfosGroups = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 32vw;
+  width: 470px;
 `;
 export const FontsArea = styled.div`
   display: flex;
   align-items: center;
-  gap: 5vw;
+  gap: 74px;
 `;
 export const ProviderBottom = styled.div`
-  gap: 3vh;
-  width: 73vw;
+  gap: 24px;
+  width: 1073px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 9vh;
+  margin-bottom: 72px;
 `;
 export const ProviderTables = styled.div``;
 
 export const TradeTop = styled.table`
   width: 100%;
   border-collapse: separate;
-  border-spacing: 0 1.5vh;
+  border-spacing: 0 12px;
   table-layout: fixed;
 
   th {
     background-color: ${({ theme }) => theme.colors.gray[400]};
     border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
-    padding: 2vh;
+    padding: 16px;
     text-align: center;
     font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
     font-family: "Pretendard-Bold";
@@ -120,7 +120,7 @@ export const TradeTop = styled.table`
     background-color: ${({ theme }) => theme.colors.white};
     border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
     text-align: center;
-    padding: 2vh;
+    padding: 16px;
     font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
     font-family: "Pretendard-Medium";
   }
@@ -143,9 +143,9 @@ export const TableMiddle = styled.table`
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  margin-bottom: 1.5vh;
+  margin-bottom: 12px;
   td {
-    width: 10vw;
+    width: 147px;
     background-color: ${({ theme }) => theme.colors.white};
     text-align: center;
     font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
@@ -155,7 +155,7 @@ export const TableMiddle = styled.table`
   th {
     background-color: ${({ theme }) => theme.colors.gray[400]};
     border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
-    padding: 2vh 0.1vw;
+    padding: 16px 1.5px;
     text-align: center;
     font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
     font-family: "Pretendard-Bold";
@@ -177,10 +177,10 @@ export const TableBottom = styled.table`
   border-spacing: 0;
 
   td {
-    width: 24vw;
+    width: 353px;
     background-color: ${({ theme }) => theme.colors.white};
     text-align: center;
-    padding: 2vh;
+    padding: 16px;
     font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
     font-family: "Pretendard-Medium";
   }
@@ -188,7 +188,7 @@ export const TableBottom = styled.table`
   th {
     background-color: ${({ theme }) => theme.colors.gray[400]};
     border-right: 1px solid ${({ theme }) => theme.colors.gray[500]};
-    padding: 2vh 2vw;
+    padding: 16px 30px;
     text-align: center;
     font-size: ${({ theme }) => theme.typography.fontSizes.heading[2]};
     font-family: "Pretendard-Bold";

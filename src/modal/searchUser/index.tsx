@@ -1,7 +1,11 @@
 import React from 'react';
 import * as S from './style';
 
-const SearchModal = ({ users }) => {
+type SearchModalProps = {
+  users: { id: number; name: string }[];
+};
+
+const SearchModal = ({ users }: SearchModalProps) => {
   return (
     <S.ModalOverlay>
       <S.ModalContainer>
