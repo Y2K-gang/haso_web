@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as S from "./style";
 import SearchUser from "@/components/searchUser";
-import Modal from "@/modal/search";
+import Modal from "@/modal/searchUser";
 
 // 사용자 타입 정의
 type User = {
