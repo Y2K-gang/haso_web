@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const SearchClientAll = styled.form`
-  width: 55vw;
-  height: 7vh;
+  width: 648px;
+  height: 53px;
   border: 2px solid ${({ theme }) => theme.colors.gray[500]};
   display: flex;
   background-color: ${({ theme }) => theme.colors.white};
@@ -18,7 +18,7 @@ export const SearchInput = styled.input`
   width: 100%;
   height: 100%;
   border: none;
-  padding: 1vw;
+  padding: 12px;
   font-size: ${({ theme }) => theme.typography.fontSizes.heading[3]};
   font-family: "Pretendard-Bold";
   outline: none;
@@ -30,7 +30,7 @@ export const SearchInput = styled.input`
   }
 `;
 export const SearchBtn = styled.button`
-  width: 3vw;
+  width: 40px;
   border: none;
   color: none;
   border-radius: 10px;
@@ -43,5 +43,5 @@ export const SearchBtn = styled.button`
   }
 `;
 export const SearchImg = styled.img`
-  width: 1.5vw;
+  width: 15px;
 `;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as S from "./style";
 import SearchUser from "@/components/searchUser";
-import Modal from "@/modal/search";
+import Modal from "@/modal/searchUser";
 
 // 사용자 타입 정의
 type User = {
@@ -13,6 +13,7 @@ const AddClient = () => {
   const [searchQuery, setSearchQuery] = useState(""); // 검색어 상태 관리
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]); // 필터링된 사용자 목록 (타입 명시)
   const [isModalOpen, setIsModalOpen] = useState(false); // 모달 열기/닫기 상태
+  const [selectedUser, setSelectedUser] = useState<User | null>(null); // 선택한 사용자 상태
 
   const users: User[] = [
     { id: 1, name: "홍길동" },
@@ -32,8 +33,9 @@ const AddClient = () => {
     setIsModalOpen(true); // 검색 후 모달 열기
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false); // 모달 닫기
+  const handleUserSelect = (user: User) => {
+    setSelectedUser(user); // 선택한 사용자 저장
+    setIsModalOpen(false); // 사용자 선택 시 모달 닫기
   };
 
   return (
@@ -72,7 +74,7 @@ const AddClient = () => {
 
       {/* 모달 창 */}
       {isModalOpen && (
-        <Modal users={filteredUsers} onClose={closeModal} />
+        <Modal users={filteredUsers} onUserSelect={handleUserSelect} />
       )}
 
       {/* 버튼 컴포넌트 추가 및 서버 연결 */}
