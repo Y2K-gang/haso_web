@@ -5,47 +5,47 @@ export const AddClientAll = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 798px;
 `;
 export const AddClientContentsArea = styled.div`
-  margin-top: 10vh;
-  width: 55vw;
+  margin-top: 80px;
+  width: 808px;
 `;
 export const SearchUser = styled.div`
-  width: 55vw;
+  width: 808px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4vh;
+  gap: 32px;
 `;
 
 export const ClientInfo = styled.div`
-  width: 55vw;
+  width: 808px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4vh;
-  margin-top: 13vh;
+  gap: 32px;
+  margin-top: 103px;
 `;
 export const ClientInfos = styled.div`
-  width: 55vw;
-  height: 20vh;
+  width: 808px;
+  height: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 10px;
-  gap: 5vw;
+  gap: 74px;
 `;
 export const ClientInfoGroups = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 5vh;
+  gap: 40px;
 `;
 export const ClientInfoOne = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 3.5vw;
+  gap: 51px;
   align-items: flex-end;
 `;
 export const InfoTitles = styled.span`
@@ -59,15 +59,15 @@ export const InfoContents = styled.span`
 
 // UserList 스타일 (검색창 바로 아래에 표시될 목록)
 export const UserList = styled.ul`
-  width: 55vw;
+  width: 808px;
   list-style: none;
   background-color: ${({ theme }) => theme.colors.white};
   position: absolute;
-  top: 24vh;
+  top: 232px;
 `;
 
 export const UserItem = styled.li`
-  padding: 1vw;
+  padding: 15px;
   font-size: ${({ theme }) => theme.typography.fontSizes.body[1]};
   font-family: "Pretendard-Medium";
   display: flex;
