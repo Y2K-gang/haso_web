@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const ManageUserBack = styled.div`
-  width: 1180px;
-  height: 100px;
+  width: 90vw;
+  height: 13vh;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.gray[400]};
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 4vh;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.gray[500]};
@@ -16,7 +16,7 @@ export const ManageUserBack = styled.div`
   }
 `;
 export const ManageUserContents = styled.div`
-  width: 1100px;
+  width: 83vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,5 +31,5 @@ export const ManageUserContentsArea = styled.div`
 `;
 
 export const ManageUserArea = styled(ManageUserContentsArea)`
-  width: 157px;
+  width: 11vw;
 `;
