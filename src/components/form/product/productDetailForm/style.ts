@@ -39,11 +39,11 @@ export const Title = styled.span`
 
 export const SemiBoldFonts = styled.span`
   font-size: ${({ theme }) => theme.typography.fontSizes.heading[1]};
-  font-family: "Pretendard-SemiBold";
+  font-family: "Pretendard-Bold";
 `;
 export const ExplainContents = styled.span`
   font-size: ${({ theme }) => theme.typography.fontSizes.heading[5]};
-  font-weight: 500;
+  font-family: "Pretendard-SemiBold";
 `;
 export const CategoryArea = styled.div`
   width: 120px;
