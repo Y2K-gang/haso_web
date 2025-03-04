@@ -1,6 +1,6 @@
 import * as S from "./style";
 
-const Category = ({text}) => {
+const Category = (text: string) => {
   return (
     <S.CategoryAll>
         <S.CategoryText>{text}</S.CategoryText>
