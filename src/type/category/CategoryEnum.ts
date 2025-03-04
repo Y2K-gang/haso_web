@@ -1,4 +1,3 @@
-// src/type/CategoryEnum.ts
 export enum CategoryEnum {
     패류 = "패류",
     어류 = "어류",

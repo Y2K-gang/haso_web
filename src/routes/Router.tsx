@@ -3,6 +3,9 @@ import { paths } from "@/constants/path";
 import Login from "@/page/auth/login";
 import SignUp from "@/page/auth/signup";
 import Main from "@/page/main";
+import ProductEdit from "@/page/product/edit";
+import ProductWrite from "@/page/product/register";
+import ProductDetail from "@/page/product/detail";
 import UserInfo from "@/page/myInfo/UserInfo";
 import MyPosts from "@/page/myInfo/myPosts";
 import InfoEdit from "@/page/myInfo/infoEdit";
@@ -27,6 +30,9 @@ const Router = () => (
       <Route path={paths.statementReceiver} element={<ReceiverPage />} />
       <Route path={paths.addClient} element={<AddClient />} />
       <Route path={paths.addBusiness} element={<AddBusiness />} />
+      <Route path={paths.productDetail} element={<ProductDetail />} />
+      <Route path={paths.productEdit} element={<ProductEdit />} />
+      <Route path={paths.productWrite} element={<ProductWrite />} />
       <Route path={paths.myInformation} element={<UserInfo />} />
       <Route path={paths.myPosts} element={<MyPosts />} />
       <Route path={paths.infoEdit} element={<InfoEdit />} />
