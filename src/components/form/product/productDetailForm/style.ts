@@ -33,25 +33,25 @@ export const ImgArea = styled.div`
 `;
 
 export const Title = styled.span`
-  font-size: 40px;
-  font-weight: bold;
+    font-size: ${({ theme }) => theme.typography.fontSizes.title[1]};
+    font-family: "Pretendard-Bold";
 `;
 
 export const SemiBoldFonts = styled.span`
-  font-size: 24px;
-  font-weight: bold;
+  font-size: ${({ theme }) => theme.typography.fontSizes.heading[1]};
+  font-family: "Pretendard-SemiBold";
 `;
 export const ExplainContents = styled.span`
-  font-size: 17px;
+  font-size: ${({ theme }) => theme.typography.fontSizes.heading[5]};
   font-weight: 500;
 `;
 export const CategoryArea = styled.div`
   width: 120px;
   height: 89px;
-  border: 2px solid #327dff;
+  border: 2px solid ${({ theme }) => theme.colors.primary[400]};
   border-radius: 5px;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: ${({ theme }) => theme.typography.fontSizes.heading[3]};
+  font-family: "Pretendard-Bold";
   display: flex;
   align-items: center;
   justify-content: center;
