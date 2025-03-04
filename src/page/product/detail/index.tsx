@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as S from "./style";
 import { useNavigate, useParams } from "react-router-dom";
 import ProductDetails from "@/components/form/product/productDetailForm";
-import ChatButton from "@/components/XLargeButton";
+import ChatButton from "src/components/button/xlarge";
 import hasoAxios from "@/libs/axios";
 import { ProductData } from "@/type/product.type";
 

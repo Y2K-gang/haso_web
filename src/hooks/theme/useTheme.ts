@@ -1,9 +1,9 @@
 import { createContext, useContext } from 'react'
 import { theme as defaultTheme } from '@/design/theme'
 
-export type Theme = typeof defaultTheme
+export type UseTheme = typeof defaultTheme
 
-export const ThemeContext = createContext<Theme | undefined>(undefined)
+export const ThemeContext = createContext<UseTheme | undefined>(undefined)
 
 export const useTheme = () => {
     const theme = useContext(ThemeContext)
