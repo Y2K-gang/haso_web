@@ -3,7 +3,7 @@ import * as S from "./style";
 import { useNavigate, useParams } from "react-router-dom";
 import ProductDetails from "@/components/form/product/detail";
 import ChatButton from "@/components/button/xlarge";
-import hasoAxios from "@/libs/axios";
+import hasoAxios from "@/libs/axios/customAxios";
 import { ProductData } from "@/type/product.type";
 
 const ProductDetailsPage = () => {
@@ -23,7 +23,7 @@ const ProductDetailsPage = () => {
         if (!productId) return;
 
         // 상품 정보 가져오기(서버 연동)
-        const fetchedProduct: ProductData = await hasoAxios.getData(
+        const fetchedProduct: ProductData = await hasoAxios.get(
           `/product/${productId}`
         );
 
@@ -53,7 +53,7 @@ const ProductDetailsPage = () => {
   const handleDeleteClick = async () => {
     if (productId) {
       try {
-        await hasoAxios.deleteData(`/product/${productId}`, {});
+        await hasoAxios.delete(`/product/${productId}`, {});
         console.log(`상품 ${productId} 삭제`);
         navigate("/main"); // 삭제 후 메인으로 리다이렉트
       } catch (err) {

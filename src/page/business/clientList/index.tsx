@@ -4,7 +4,7 @@ import wasteBasket from "@/assets/image/wasteBasket.svg";
 import AddBtn from "@/components/button/add";
 import userDataList from "@/data";
 import { useNavigate } from "react-router-dom";
-import hasoAxios from "@/libs/axios";
+import hasoAxios from "@/libs/axios/customAxios";
 
 const ClientList = () => {
   const navigate = useNavigate();

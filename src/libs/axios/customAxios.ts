@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { requestInterceptor } from "./requestInterceptor";
-import { errorHandler } from "./errorHandler";
+import {responseErrorInterceptor} from "@/libs/axios/responseErrorInterceptor";
 import { REQUEST_TOKEN, ACCESS_TOKEN } from "@/constants/token/token.constants";
 import Token from "@/libs/token/cookie";
 

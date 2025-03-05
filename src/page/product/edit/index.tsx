@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import ProductEditForm from "src/components/form/product/edit";
+import ProductEditForm from "@/components/form/product/edit";
 import { ProductData } from "@/type/product.type";
 import * as S from "./style"
-import hasoAxios from "@/libs/axios";
+import hasoAxios from "@/libs/axios/customAxios";
 import { toast } from "react-toastify";
 
 const ProductEditPage = () => {
@@ -22,10 +22,10 @@ const ProductEditPage = () => {
 
     const fetchProduct = async () => {
       try {
-        const response = await hasoAxios.getData<ProductData>(
+        const response = await hasoAxios.get<ProductData>(
           `/product/${productId}`
         );
-        setProduct(response); // 응답 데이터 저장
+        setProduct(response.data); // 응답 데이터 저장
       } catch (err) {
         console.error("상품 정보를 불러오는 중 오류 발생:", err);
         setError("상품 정보를 불러오는 데 실패했습니다.");
@@ -39,7 +39,7 @@ const ProductEditPage = () => {
 
   const handleSave = async (updatedProduct: ProductData) => {
     try {
-      await hasoAxios.patchData(`/product/${productId}`, updatedProduct);
+      await hasoAxios.patch(`/product/${productId}`, updatedProduct);
       toast.success("수정이 완료되었습니다!");
       navigate(`/product/${productId}`); // 수정 후 상세 페이지로 이동
     } catch (err) {

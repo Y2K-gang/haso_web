@@ -41,45 +41,44 @@ const Three = ({ signUp,validate, onChange }: StepProps) => {
         onChange={onChange}
       />
 
-      {/* Modal */}
-      <Modal isOpen={isModalOpen} onClose={handleModalClose}>
-        <S.ModalContent>
-          <S.ModalHeader>
-            <S.ModalTitle>사업자 인증</S.ModalTitle>
-            <S.CloseButton onClick={handleModalClose}>
-              <FaTimes size={20} />
-            </S.CloseButton>
-          </S.ModalHeader>
-          <S.ModalBody>
-            <FormField
-              label="사업자 등록번호"
-              name="business_registration_number"
-              placeholder="사업자 등록번호를 입력해주세요."
-              value={validate?.b_no}
-              onChange={onChange}
-            />
-            <FormField
-              label="개업 일자"
-              name="business_start_date"
-              placeholder="개업 일자를 입력해주세요."
-              value={validate?.start_dt}
-              onChange={onChange}
-            />
-            <FormField
-              label="대표자 성명"
-              name="ceo_name"
-              placeholder="대표자 성명을 입력해주세요."
-              value={validate?.p_nm}
-              onChange={onChange}
-            />
-          </S.ModalBody>
-          <S.ModalFooter>
-            <SmallButton variant="primary" onClick={handleModalClose}>
-              확인
-            </SmallButton>
-          </S.ModalFooter>
-        </S.ModalContent>
-      </Modal>
+      {/*<Modal isOpen={isModalOpen} onClose={handleModalClose}>*/}
+      {/*  <S.ModalContent>*/}
+      {/*    <S.ModalHeader>*/}
+      {/*      <S.ModalTitle>사업자 인증</S.ModalTitle>*/}
+      {/*      <S.CloseButton onClick={handleModalClose}>*/}
+      {/*        <FaTimes size={20} />*/}
+      {/*      </S.CloseButton>*/}
+      {/*    </S.ModalHeader>*/}
+      {/*    <S.ModalBody>*/}
+      {/*      <FormField*/}
+      {/*        label="사업자 등록번호"*/}
+      {/*        name="business_registration_number"*/}
+      {/*        placeholder="사업자 등록번호를 입력해주세요."*/}
+      {/*        value={validate?.b_no}*/}
+      {/*        onChange={onChange}*/}
+      {/*      />*/}
+      {/*      <FormField*/}
+      {/*        label="개업 일자"*/}
+      {/*        name="business_start_date"*/}
+      {/*        placeholder="개업 일자를 입력해주세요."*/}
+      {/*        value={validate?.start_dt}*/}
+      {/*        onChange={onChange}*/}
+      {/*      />*/}
+      {/*      <FormField*/}
+      {/*        label="대표자 성명"*/}
+      {/*        name="ceo_name"*/}
+      {/*        placeholder="대표자 성명을 입력해주세요."*/}
+      {/*        value={validate?.p_nm}*/}
+      {/*        onChange={onChange}*/}
+      {/*      />*/}
+      {/*    </S.ModalBody>*/}
+      {/*    <S.ModalFooter>*/}
+      {/*      <SmallButton variant="primary" onClick={handleModalClose}>*/}
+      {/*        확인*/}
+      {/*      </SmallButton>*/}
+      {/*    </S.ModalFooter>*/}
+      {/*  </S.ModalContent>*/}
+      {/*</Modal>*/}
     </FormGap>
   );
 };
