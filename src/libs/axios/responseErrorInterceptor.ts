@@ -2,7 +2,7 @@ import { AxiosError } from "axios";
 import Token from "@/libs/token/cookie"
 import { ACCESS_TOKEN,REFRESH_TOKEN, REQUEST_TOKEN } from "@/constants/token/token.constants";
 import DaodaAxios from "./customAxios";
-import { refresh } from "src/api/auth/auth.api";
+import { refresh } from "@/api/auth/auth.api";
 
 //리프레쉬 작업중인지 아닌지를 구분하는 변수
 let isRefreshing = false;
