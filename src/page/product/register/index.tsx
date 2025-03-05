@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ProductForm from "@/components/form/product/productRegisterForm";
+import ProductForm from "src/components/form/product/register";
 import { ProductData } from "@/type/product.type";
 import * as S from "./style";
 import hasoAxios from "@/libs/axios";

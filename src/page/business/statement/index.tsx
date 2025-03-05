@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import * as S from "./style";
 import vectorImg from '@/assets/image/vector.svg';
-import AddBtn from "@/components/addBtn";
+import AddBtn from "src/components/button/add";
 import userDataList from "@/data";  // 사용자 데이터 리스트를 import
 import ManageProduct from "@/components/manageProduct";
 

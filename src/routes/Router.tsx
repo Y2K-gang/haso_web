@@ -6,16 +6,16 @@ import Main from "@/page/main";
 import ProductEdit from "@/page/product/edit";
 import ProductWrite from "@/page/product/register";
 import ProductDetail from "@/page/product/detail";
-import UserInfo from "@/page/myInfo/UserInfo";
-import MyPosts from "@/page/myInfo/myPosts";
-import InfoEdit from "@/page/myInfo/infoEdit";
-import ClientList from "@/page/manage/clientList";
-import BusinessHistory from "@/page/manage/businessHistory";
-import Statement from "@/page/manage/statement";
-import ProviderPage from "@/page/manage/provider";
-import ReceiverPage from "@/page/manage/receiver";
-import AddClient from "@/page/manage/addClient";
-import AddBusiness from "@/page/manage/addBusiness";
+import UserInfo from "@/page/information/UserInfo";
+import MyPosts from "@/page/information/myPosts";
+import InfoEdit from "@/page/information/edit";
+import ClientList from "@/page/business/clientList";
+import BusinessHistory from "@/page/business/history";
+import Statement from "@/page/business/statement";
+import ProviderPage from "@/page/business/provider";
+import ReceiverPage from "@/page/business/receiver";
+import AddClient from "@/page/business/addClient";
+import AddBusiness from "@/page/business/addBusiness";
 
 const Router = () => (
   <BrowserRouter>

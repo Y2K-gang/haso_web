@@ -4,7 +4,7 @@ import * as S from "./style";
 
 import Header from "@/components/common/header";
 import Slide from "@/components/slide";
-import TabBar from "@/components/tapbar";
+import TabBar from "src/components/common/tapbar";
 import ProductCard from "@/components/product/card";
 
 const Main = () => {

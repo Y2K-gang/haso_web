@@ -2,7 +2,7 @@ import React from "react";
 import * as S from "./style";
 import LogoIcons from "@/components/icons/logo";
 import ProfileIcon from "@/components/icons/profile";
-import CustomDropdown from "@/components/dropdown";
+import CustomDropdown from "src/components/common/dropdown";
 
 const Header = () => {
   const handleSelect = (value: string) => {

@@ -1,7 +1,7 @@
 import * as S from "./style";
 import ManageUser from "@/components/manageUser";
 import wasteBasket from "@/assets/image/wasteBasket.svg";
-import AddBtn from "@/components/addBtn";
+import AddBtn from "@/components/button/add";
 import userDataList from "@/data";
 import { useNavigate } from "react-router-dom";
 import hasoAxios from "@/libs/axios";

@@ -7,13 +7,13 @@ type ProductDetailsProps = {
 };
 
 const ProductDetails = ({ product }: ProductDetailsProps) => {
+  const renderImages = () => {
     if (!product.images || product.images.length === 0) {
       return <p>이미지가 없습니다.</p>;
     }
 
     return product.images.map((image, index) => {
-      const imageUrl =
-        image instanceof File ? URL.createObjectURL(image) : image;
+      const imageUrl = image instanceof File ? URL.createObjectURL(image) : image;
       return (
         <img
           key={index}
@@ -27,9 +27,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
 
   return (
     <S.AllAreaOfDetail>
-      <S.ImgArea>
-      {renderImages()}
-      </S.ImgArea>
+      <S.ImgArea>{renderImages()}</S.ImgArea>
       <S.InfoArea>
         <S.Title>{product.title}</S.Title>
         <S.InfoAreaInArea>

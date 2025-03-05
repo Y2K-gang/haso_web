@@ -1,8 +1,8 @@
-import { CategoryEnum } from "@/type/category/CategoryEnum"; // enum import
+import { CategoryEnum } from "@/type/category/CategoryEnum";
 import * as S from "./style";
 
 interface ManageProductProps {
-  text: CategoryEnum; // `CategoryEnum` 타입 적용
+  text: string | CategoryEnum;
   date: string;
   onClick: () => void;
 }

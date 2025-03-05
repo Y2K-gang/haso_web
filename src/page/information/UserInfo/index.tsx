@@ -1,20 +1,20 @@
 import Category from "@/components/category";
 import * as S from "./style";
 import ProfileIcon from "@/components/icons/profile";
-import SettingIcon from "@/components/icons/setting";
 import ProductCard from "@/components/product/card";
-import TabBar from "@/components/tapbar";
+import TabBar from "@/components/common/tapbar";
 import { useNavigate } from "react-router-dom";
 import TabBarWithoutMore from "@/components/topbarWithoutMore";
+import { paths } from "@/constants/path";
 
 const UserInfo = () => {
   const navigate = useNavigate();
 
   const onMoreClick = () => {
-    navigate("/myInformation/myPosts");
+    navigate(paths.myPosts);
   };
   const onEditClick = () => {
-    navigate("/myInformation/informationEdit");
+    navigate(paths.infoEdit);
   };
 
   const products = [

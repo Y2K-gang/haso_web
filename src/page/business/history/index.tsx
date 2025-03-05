@@ -1,29 +1,30 @@
-import AddBtn from "@/components/addBtn";
+import AddBtn from "@/components/button/add";
 import * as S from "./style";
 import ManageProduct from "@/components/manageProduct";
 import { useNavigate, useParams } from "react-router-dom";
 import userDataList from "@/data";
 import vectorImg from "@/assets/image/vector.svg";
+import { paths } from "@/constants/path";
 
 const BusinessHistory = () => {
   const navigate = useNavigate();
-  const { userId } = useParams(); // URL에서 userId 추출
-  const user = userDataList.find((u) => u.id === parseInt(userId)); // userId로 해당 사용자 찾기
+  const { userId } = useParams();
+  const user = userDataList.find((u) => u.id === parseInt(userId))
 
   if (!user) {
-    return <div>사용자 정보를 찾을 수 없습니다.</div>; // 유효하지 않은 사용자 ID 처리
+    return <div>사용자 정보를 찾을 수 없습니다.</div>;
   }
 
-  const { name, transactions } = user; // 사용자 이름과 거래 내역 추출
+  const { name, transactions } = user;
 
-  const handleTransactionClick = (productId) => {
-    navigate(`/statement/${userId}/${productId}`); // 거래별 ID로 이동
+  const handleTransactionClick = (productId: number) => {
+    navigate(`/statement/${userId}/${productId}`);
   };
   const handleGoBack = () => {
     navigate(-1);
   };
   const handleAddBusiness = () => {
-    navigate(`/addBusiness`);
+    navigate(paths.addBusiness);
   };
 
   return (
@@ -36,9 +37,9 @@ const BusinessHistory = () => {
       </S.HistoryListTopArea>
       {transactions.map((transaction) => (
         <ManageProduct
-          key={transaction.id} // 고유 키로 id 사용
-          text={transaction.text} // 거래 내용 전달
-          date={transaction.date} // 거래 날짜 전달
+          key={transaction.id}
+          text={transaction.text}
+          date={transaction.date}
           onClick={() => handleTransactionClick(transaction.id)} // 클릭 이벤트 전달
         />
       ))}

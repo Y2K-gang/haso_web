@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import ProductEditForm from "@/components/form/product/productEditForm";
+import ProductEditForm from "src/components/form/product/edit";
 import { ProductData } from "@/type/product.type";
 import * as S from "./style"
 import hasoAxios from "@/libs/axios";
