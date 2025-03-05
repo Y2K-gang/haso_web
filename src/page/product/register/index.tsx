@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import ProductForm from "src/components/form/product/register";
+import ProductForm from "@/components/form/product/register";
 import { ProductData } from "@/type/product.type";
 import * as S from "./style";
-import hasoAxios from "@/libs/axios";
+import hasoAxios from "@/libs/axios/customAxios"
 import { Toast } from "@/libs/toast"
 
 const RegisterProductPage = () => {
@@ -26,21 +26,18 @@ const RegisterProductPage = () => {
           isValid = false;
           element.classList.add("error"); // 값이 없으면 오류 스타일 추가
         } else {
-          element.classList.remove("error"); // 값이 있으면 오류 스타일 제거
+          element.classList.remove("error");
         }
       });
   
       if (!isValid) {
         Toast("info", "모든 필드를 작성해주세요.");
-        return; // 유효성 검사 실패 시 제출을 막음
+        return;
       }
-  
-      // 제품 등록 요청
-      const response = await hasoAxios.postData("/product", data);
+      const response = await hasoAxios.post("/product", data);
   
       console.log("제품 등록 성공:", response);
       Toast("success", "제품 등록 완료!");
-      // 필요시 페이지 이동 처리
     } catch (err: any) {
       console.error("제품 등록 실패:", err);
       setError(

@@ -1,38 +1,32 @@
-import axios, { AxiosInstance, AxiosError } from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import { requestInterceptor } from "./requestInterceptor";
 import { errorHandler } from "./errorHandler";
-import { SERVER_URL } from "@env";
+import { REQUEST_TOKEN, ACCESS_TOKEN } from "@/constants/token/token.constants";
+import Token from "@/libs/token/cookie";
 
-class CustomAxiosService {
-  private axiosInstance: AxiosInstance;
+const SERVER_URL = import.meta.env.SERVER_URL;
 
-  constructor(baseURL: string) {
-    this.axiosInstance = axios.create({
-      baseURL,
-      timeout: 10000,
-      withCredentials: true,
-      headers: { "Content-Type": "application/json" },
-    });
+const createCustomAxiosInstance = (baseURL?: AxiosRequestConfig) => {
+  const baseConfig: AxiosRequestConfig = {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  };
+  return axios.create({
+    ...baseConfig,
+    ...baseURL,
+    withCredentials: true,
+  });
+};
 
-    // 요청 인터셉터 등록
-    this.axiosInstance.interceptors.request.use(requestInterceptor);
+export const hasoAxios = createCustomAxiosInstance({
+  baseURL: SERVER_URL,
+  headers: {
+    [REQUEST_TOKEN]: `Bearer ${Token.getToken(ACCESS_TOKEN)}`!,
+  },
+});
 
-    // 응답 에러 인터셉터 등록
-    this.axiosInstance.interceptors.response.use(
-      (response) => response,
-      (error: AxiosError) => {
-        console.error("Response Error Intercepted:", error);
-        errorHandler(error);
-        return Promise.reject(error);
-      }
-    );
-  }
+hasoAxios.interceptors.request.use((response)=>response,requestInterceptor);
+hasoAxios.interceptors.response.use((response)=>response, responseErrorInterceptor);
 
-  public getInstance(): AxiosInstance {
-    return this.axiosInstance;
-  }
-}
-
-const DaodaAxios = new CustomAxiosService(SERVER_URL).getInstance();
-
-export default DaodaAxios;
+export default hasoAxios;

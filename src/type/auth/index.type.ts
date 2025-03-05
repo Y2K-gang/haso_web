@@ -21,3 +21,16 @@ export interface ValidateProps extends SignUpProps {
     start_dt: string; // 개업일자
     p_nm: string; // 대표자 성명
 }
+
+export interface LoginResponse {
+    data : {
+        accessToken: string;
+        refreshToken: string;
+    }
+}
+
+export interface NewAccessToken {
+    data: {
+        accessToken: string;
+    }
+}
