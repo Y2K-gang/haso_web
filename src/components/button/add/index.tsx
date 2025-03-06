@@ -1,11 +1,11 @@
 import * as S from "./style";
-import plusImg from "@/assets/image/plus.svg";
+import plugImg from "@/assets/icons/plus/plus.svg";
 import { ButtonProps } from "@/type/button/button.type";
 
 const AddBtn = ({ onClick }: ButtonProps) => {
   return (
     <S.AddBtnBack onClick={onClick}>
-      <S.AddBtnImg src={plusImg} />
+      <S.AddBtnImg src={plugImg} />
     </S.AddBtnBack>
   );
 };

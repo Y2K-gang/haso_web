@@ -1,21 +1,31 @@
 import { ThemeContext } from '@/hooks/theme/useTheme'
+import {QueryClient, QueryClientProvider} from "react-query";
+import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { theme } from "@/design/theme";
 import Router from "@/routes/Router"
 import GlobalStyle from "@/design/GlobalStyle";
-import { ToastContainer } from "react-toastify";
 
-interface ThemeProviderProps {
-  children: React.ReactNode;
-}
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      useErrorBoundary: true,
+    },
+  },
+});
 
-const Provider = ({children}: ThemeProviderProps) => {
+const Provider = () => {
   return (
-    <ThemeContext.Provider value={theme}>
-      <ToastContainer />
-      <GlobalStyle />
-      <Router />
-      {children}
-    </ThemeContext.Provider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeContext.Provider value={theme}>
+        <BrowserRouter>
+          <GlobalStyle />
+          <ToastContainer />
+          <Router />
+        </BrowserRouter>
+      </ThemeContext.Provider>
+  </QueryClientProvider>
   );
 }
 
